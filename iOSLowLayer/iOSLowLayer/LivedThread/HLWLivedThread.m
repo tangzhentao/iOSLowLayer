@@ -22,10 +22,7 @@
     self = [super init];
     if (self)
     {
-        HLWThread *innerThread = [[HLWThread alloc] initWithBlock:^{
-            [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
-            CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0e10, false);
-        }];
+        HLWThread *innerThread = [[HLWThread alloc] initWithTarget:self selector:@selector(addPortAndRun) object:nil];
         _innerThread = innerThread;
         [innerThread start];
     }
@@ -35,6 +32,12 @@
 - (void)dealloc
 {
     NSLog(@"[%@ %@]: %@<%p>", [self class], NSStringFromSelector(_cmd), self.name, self);
+}
+
+- (void)addPortAndRun
+{
+    [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0e10, false);
 }
 
 - (void)asynPerformBlock:(void (^)(void))taskBlock

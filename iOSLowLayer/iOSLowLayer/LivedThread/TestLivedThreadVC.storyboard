@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ryx-7P-diW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ryx-7P-diW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +13,10 @@
         <scene sceneID="uXL-Tf-yJx">
             <objects>
                 <viewController id="Ryx-7P-diW" customClass="TestLivedThreadVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zrc-hp-l5L"/>
+                        <viewControllerLayoutGuide type="bottom" id="yhv-8I-RB9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VE3-9k-kXH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,14 +62,13 @@
                         <constraints>
                             <constraint firstItem="wJQ-Mu-rGN" firstAttribute="centerX" secondItem="VE3-9k-kXH" secondAttribute="centerX" id="Nvh-3i-I2Z"/>
                             <constraint firstItem="8yz-n7-SnY" firstAttribute="top" secondItem="wJQ-Mu-rGN" secondAttribute="bottom" constant="80" id="SSv-Yy-KCP"/>
-                            <constraint firstItem="8yz-n7-SnY" firstAttribute="leading" secondItem="qDe-L5-qJ4" secondAttribute="leading" constant="30" id="nn5-JV-VjS"/>
+                            <constraint firstItem="8yz-n7-SnY" firstAttribute="leading" secondItem="VE3-9k-kXH" secondAttribute="leading" constant="30" id="nn5-JV-VjS"/>
                             <constraint firstItem="7O4-fE-WMb" firstAttribute="centerX" secondItem="VE3-9k-kXH" secondAttribute="centerX" id="oPF-AC-9aq"/>
-                            <constraint firstItem="qDe-L5-qJ4" firstAttribute="trailing" secondItem="x7W-nn-xtS" secondAttribute="trailing" constant="30" id="pwW-Hc-31b"/>
+                            <constraint firstAttribute="trailing" secondItem="x7W-nn-xtS" secondAttribute="trailing" constant="30" id="pwW-Hc-31b"/>
                             <constraint firstItem="7O4-fE-WMb" firstAttribute="top" secondItem="wJQ-Mu-rGN" secondAttribute="bottom" constant="200" id="t89-AH-UOd"/>
                             <constraint firstItem="x7W-nn-xtS" firstAttribute="centerY" secondItem="8yz-n7-SnY" secondAttribute="centerY" id="yIY-lT-0OG"/>
-                            <constraint firstItem="wJQ-Mu-rGN" firstAttribute="top" secondItem="qDe-L5-qJ4" secondAttribute="top" constant="100" id="yyK-QI-LPA"/>
+                            <constraint firstItem="wJQ-Mu-rGN" firstAttribute="top" secondItem="Zrc-hp-l5L" secondAttribute="bottom" constant="100" id="yyK-QI-LPA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qDe-L5-qJ4"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4R-SC-rOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

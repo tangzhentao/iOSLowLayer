@@ -9,6 +9,7 @@
 #import "TableViewController.h"
 
 #import "RunStopRunLoopVC.h"
+#import "LearnItem.h"
 
 @interface TableViewController ()
 
@@ -23,46 +24,10 @@
     
     _dataArray = [NSMutableArray array];
     [_dataArray addObjectsFromArray:@[
-                                      @"a",
-                                      @"b",
-                                      @"c",
-                                      @"d",
-                                      @"e",
-                                      @"f",
-                                      @"g",
-                                      @"h",
-                                      @"i",
-                                      @"j",
-                                      @"k",
-                                      @"l",
-                                      @"m",
-                                      @"n",
-                                      @"o",
-                                      @"p",
-                                      @"q",
-                                      @"r",
-                                      @"s",
-                                      @"t",
-                                      @"u",
-                                      @"v",
-                                      @"w",
-                                      @"x",
-                                      @"y",
-                                      @"z",
-                                      @"0",
-                                      @"1",
-                                      @"2",
-                                      @"3",
-                                      @"4",
-                                      @"5",
-                                      @"6",
-                                      @"7",
-                                      @"8",
-                                      @"9",
-                                      @",",
-                                      @".",
-                                      @"/",
-                                      @"[",
+                                      [LearnItem learnItemWithType:LearnItemTypeRunStopRunLoop title:@"Run Stop RunLoop"],
+                                      [LearnItem learnItemWithType:LearnItemTypeLivedThread title:@" Lived Thread"],
+
+                            
                                       ]];
     
      [self printRunLoopActivity];
@@ -126,16 +91,41 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
  
-    cell.textLabel.text = _dataArray[indexPath.row];
+    LearnItem *item = (LearnItem *)self.dataArray[indexPath.row];
+
+    cell.textLabel.text = item.title;
  
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RunStopRunLoopVC"];
-    [self.navigationController pushViewController:vc animated:YES];
+    LearnItem *item = (LearnItem *)self.dataArray[indexPath.row];
+    [self dispatchEventWithType:item.type];
+}
+
+- (void)dispatchEventWithType:(LearnItemType)type
+{
+    switch (type) {
+        case LearnItemTypeRunStopRunLoop:
+        {
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"RunStopRunLoopVC"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case LearnItemTypeLivedThread:
+        {
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:@"TestLivedThreadVC" bundle:nil];
+            UIViewController *vc = sb.instantiateInitialViewController;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

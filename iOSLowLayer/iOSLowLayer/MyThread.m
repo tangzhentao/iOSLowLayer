@@ -8,11 +8,7 @@
 
 #import "MyThread.h"
 
-static long MyThreadNum = 0;
-
 @interface MyThread ()
-
-@property (assign, nonatomic)  long  number;
 
 @end
 
@@ -23,21 +19,13 @@ static long MyThreadNum = 0;
     self = [super init];
     if (self)
     {
-        MyThreadNum++;
-        _number = MyThreadNum;
     }
     return self;
 }
 
-- (NSString *)name
-{
-    NSString *name = [super name];
-    return [NSString stringWithFormat:@"%@ %ld", name, _number];
-}
-
 - (void)dealloc
 {
-    NSLog(@"[%@ %@]: %@", [self class], NSStringFromSelector(_cmd), self.name);
+    NSLog(@"[%@ %@]: %@<%p>", [self class], NSStringFromSelector(_cmd), self.name, self);
 }
 
 @end

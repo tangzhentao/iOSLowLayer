@@ -7,11 +7,11 @@
 //
 
 #import "RunStopRunLoopVC.h"
-#import "MyThread.h"
+#import "HLWThread.h"
 
 @interface RunStopRunLoopVC ()
 
-@property (weak, nonatomic) MyThread *thread;
+@property (weak, nonatomic) HLWThread *thread;
 @property (assign, nonatomic) BOOL shouldKeepRunning;
 
 
@@ -52,7 +52,7 @@
     self.shouldKeepRunning = YES;
     
     __weak typeof(self) weakSelf = self;
-    MyThread *thread = [[MyThread alloc] initWithBlock:^{
+    HLWThread *thread = [[HLWThread alloc] initWithBlock:^{
         
         NSLog(@"%@ > *** begin ***.", [NSThread currentThread].name);
         
@@ -96,7 +96,7 @@
     self.shouldKeepRunning = YES;
     
     __weak typeof(self) weakSelf = self;
-    MyThread *thread = [[MyThread alloc] initWithBlock:^{
+    HLWThread *thread = [[HLWThread alloc] initWithBlock:^{
         
         NSLog(@"%@ > *** begin ***.", [NSThread currentThread].name);
         
@@ -150,7 +150,7 @@
     self.shouldKeepRunning = YES;
     
     __weak typeof(self) weakSelf = self;
-    MyThread *thread = [[MyThread alloc] initWithBlock:^{
+    HLWThread *thread = [[HLWThread alloc] initWithBlock:^{
         
         NSLog(@"%@ > *** begin ***.", [NSThread currentThread].name);
         

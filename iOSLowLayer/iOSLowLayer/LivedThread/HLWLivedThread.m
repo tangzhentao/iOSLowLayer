@@ -7,11 +7,11 @@
 //
 
 #import "HLWLivedThread.h"
-#import "MyThread.h"
+#import "HLWThread.h"
 
 @interface HLWLivedThread ()
 
-@property (weak, nonatomic) MyThread *innerThread;
+@property (weak, nonatomic) HLWThread *innerThread;
 
 @end
 
@@ -22,7 +22,7 @@
     self = [super init];
     if (self)
     {
-        MyThread *innerThread = [[MyThread alloc] initWithBlock:^{
+        HLWThread *innerThread = [[HLWThread alloc] initWithBlock:^{
             [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
             CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0e10, false);
         }];

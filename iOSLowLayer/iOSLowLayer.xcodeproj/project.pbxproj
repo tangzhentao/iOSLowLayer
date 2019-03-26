@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2408DC872244746300F8F720 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC862244746300F8F720 /* TableViewController.m */; };
-		2408DC8D2244787A00F8F720 /* MyThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC8C2244787A00F8F720 /* MyThread.m */; };
+		2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC8C2244787A00F8F720 /* HLWThread.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
 		24AD7874224888C900520B8E /* LearnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD7873224888C900520B8E /* LearnItem.m */; };
 		24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD78772248B01100520B8E /* TestLivedThreadVC.m */; };
@@ -24,8 +24,8 @@
 /* Begin PBXFileReference section */
 		2408DC852244746300F8F720 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2408DC862244746300F8F720 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		2408DC8B2244787900F8F720 /* MyThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyThread.h; sourceTree = "<group>"; };
-		2408DC8C2244787A00F8F720 /* MyThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyThread.m; sourceTree = "<group>"; };
+		2408DC8B2244787900F8F720 /* HLWThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWThread.h; sourceTree = "<group>"; };
+		2408DC8C2244787A00F8F720 /* HLWThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWThread.m; sourceTree = "<group>"; };
 		24AD786F22486E6D00520B8E /* HLWLivedThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWLivedThread.h; sourceTree = "<group>"; };
 		24AD787022486E6D00520B8E /* HLWLivedThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLWLivedThread.m; sourceTree = "<group>"; };
 		24AD7872224888C900520B8E /* LearnItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnItem.h; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 		24AD78752248AFB100520B8E /* LivedThread */ = {
 			isa = PBXGroup;
 			children = (
-				2408DC8B2244787900F8F720 /* MyThread.h */,
-				2408DC8C2244787A00F8F720 /* MyThread.m */,
+				2408DC8B2244787900F8F720 /* HLWThread.h */,
+				2408DC8C2244787A00F8F720 /* HLWThread.m */,
 				24AD786F22486E6D00520B8E /* HLWLivedThread.h */,
 				24AD787022486E6D00520B8E /* HLWLivedThread.m */,
 				24AD78762248B01100520B8E /* TestLivedThreadVC.h */,
@@ -183,7 +183,7 @@
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,
-				2408DC8D2244787A00F8F720 /* MyThread.m in Sources */,
+				2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */,
 				24AD7874224888C900520B8E /* LearnItem.m in Sources */,
 				2408DC872244746300F8F720 /* TableViewController.m in Sources */,
 			);

@@ -6,9 +6,9 @@
 //  Copyright © 2019 genghaowan. All rights reserved.
 //
 
-#import "MyThread.h"
+#import "HLWThread.h"
 
-@implementation MyThread
+@implementation HLWThread
 
 - (void)dealloc
 {

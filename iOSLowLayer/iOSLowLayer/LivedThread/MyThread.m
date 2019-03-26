@@ -8,20 +8,7 @@
 
 #import "MyThread.h"
 
-@interface MyThread ()
-
-@end
-
 @implementation MyThread
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self)
-    {
-    }
-    return self;
-}
 
 - (void)dealloc
 {

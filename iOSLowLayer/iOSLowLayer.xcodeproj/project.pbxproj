@@ -59,6 +59,8 @@
 		24AD78752248AFB100520B8E /* LivedThread */ = {
 			isa = PBXGroup;
 			children = (
+				2408DC8B2244787900F8F720 /* MyThread.h */,
+				2408DC8C2244787A00F8F720 /* MyThread.m */,
 				24AD786F22486E6D00520B8E /* HLWLivedThread.h */,
 				24AD787022486E6D00520B8E /* HLWLivedThread.m */,
 				24AD78762248B01100520B8E /* TestLivedThreadVC.h */,
@@ -87,8 +89,6 @@
 		24EA2FDB2243AA03004EE50F /* iOSLowLayer */ = {
 			isa = PBXGroup;
 			children = (
-				2408DC8B2244787900F8F720 /* MyThread.h */,
-				2408DC8C2244787A00F8F720 /* MyThread.m */,
 				24EA2FDC2243AA03004EE50F /* AppDelegate.h */,
 				24EA2FDD2243AA03004EE50F /* AppDelegate.m */,
 				2408DC852244746300F8F720 /* TableViewController.h */,

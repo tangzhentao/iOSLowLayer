@@ -37,10 +37,17 @@
     NSLog(@"[%@ %@]: %@<%p>", [self class], NSStringFromSelector(_cmd), self.name, self);
 }
 
-- (void)performBlock:(void (^)(void))taskBlock
+- (void)asynPerformBlock:(void (^)(void))taskBlock
 {
     if (self.innerThread && taskBlock) {
         [self performSelector:@selector(performBlockOnInnerThread:) onThread:self.innerThread withObject:taskBlock waitUntilDone:NO];
+    }
+}
+
+- (void)synPerformBlock:(void (^)(void))taskBlock
+{
+    if (self.innerThread && taskBlock) {
+        [self performSelector:@selector(performBlockOnInnerThread:) onThread:self.innerThread withObject:taskBlock waitUntilDone:YES];
     }
 }
 

@@ -27,7 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  在线程中执行一个任务
  */
-- (void)performBlock:(void (^)(void))taskBlock;
+- (void)asynPerformBlock:(void (^)(void))taskBlock;
+
+/*!
+ 在线程中执行一个任务并等待执行完成
+ */
+- (void)synPerformBlock:(void (^)(void))taskBlock;
 
 
 /*!

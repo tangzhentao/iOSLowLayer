@@ -25,10 +25,13 @@
 - (void)dealloc
 {
     NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+    
+    [self end:nil];
 }
 
 - (IBAction)start:(id)sender
 {
+    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
     if (!_livedThread)
     {
         _livedThread = [[HLWLivedThread alloc] init];
@@ -39,18 +42,52 @@
 
 - (IBAction)end:(id)sender
 {
+    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
     if (_livedThread)
     {
         [_livedThread end];
         _livedThread = nil;
     }
 }
+- (IBAction)asyn:(id)sender
+{
+    NSLog(@"[%@ %@]: ** begin ** ", [self class], NSStringFromSelector(_cmd));
+    
+    if (_livedThread)
+    {
+        static int count = 1;
+        [_livedThread asynPerformBlock:^{
+            NSLog(@"%@ > do something[%d].", [NSThread currentThread].name, count);
+            ++count;
+        }];
+    }
+    
+    NSLog(@"[%@ %@]: ** end ** ", [self class], NSStringFromSelector(_cmd));
+    NSLog(@"");
+}
+
+- (IBAction)syn:(id)sender
+{
+    NSLog(@"[%@ %@]: ** begin ** ", [self class], NSStringFromSelector(_cmd));
+    
+    if (_livedThread)
+    {
+        static int count = 1;
+        [_livedThread synPerformBlock:^{
+            NSLog(@"%@ > do something[%d].", [NSThread currentThread].name, count);
+            ++count;
+        }];
+    }
+    
+    NSLog(@"[%@ %@]: ** end ** ", [self class], NSStringFromSelector(_cmd));
+    NSLog(@"");
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     if (_livedThread)
     {
-        [_livedThread performBlock:^{
+        [_livedThread asynPerformBlock:^{
             NSLog(@"%@ > do something.", [NSThread currentThread].name);
         }];
     }

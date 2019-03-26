@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7O4-fE-WMb">
-                                <rect key="frame" x="144.5" y="227" width="86" height="47"/>
+                                <rect key="frame" x="144.5" y="367" width="86" height="47"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="   end   "/>
@@ -36,12 +36,34 @@
                                     <action selector="start:" destination="Ryx-7P-diW" eventType="touchUpInside" id="qRS-gi-y6b"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7W-nn-xtS">
+                                <rect key="frame" x="263" y="247" width="82" height="47"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="   syn   "/>
+                                <connections>
+                                    <action selector="syn:" destination="Ryx-7P-diW" eventType="touchUpInside" id="LZw-Z3-pUA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-n7-SnY">
+                                <rect key="frame" x="30" y="247" width="97" height="47"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="   asyn   "/>
+                                <connections>
+                                    <action selector="asyn:" destination="Ryx-7P-diW" eventType="touchUpInside" id="dgG-J8-HIo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="wJQ-Mu-rGN" firstAttribute="centerX" secondItem="VE3-9k-kXH" secondAttribute="centerX" id="Nvh-3i-I2Z"/>
+                            <constraint firstItem="8yz-n7-SnY" firstAttribute="top" secondItem="wJQ-Mu-rGN" secondAttribute="bottom" constant="80" id="SSv-Yy-KCP"/>
+                            <constraint firstItem="8yz-n7-SnY" firstAttribute="leading" secondItem="qDe-L5-qJ4" secondAttribute="leading" constant="30" id="nn5-JV-VjS"/>
                             <constraint firstItem="7O4-fE-WMb" firstAttribute="centerX" secondItem="VE3-9k-kXH" secondAttribute="centerX" id="oPF-AC-9aq"/>
-                            <constraint firstItem="7O4-fE-WMb" firstAttribute="top" secondItem="wJQ-Mu-rGN" secondAttribute="bottom" constant="60" id="t89-AH-UOd"/>
+                            <constraint firstItem="qDe-L5-qJ4" firstAttribute="trailing" secondItem="x7W-nn-xtS" secondAttribute="trailing" constant="30" id="pwW-Hc-31b"/>
+                            <constraint firstItem="7O4-fE-WMb" firstAttribute="top" secondItem="wJQ-Mu-rGN" secondAttribute="bottom" constant="200" id="t89-AH-UOd"/>
+                            <constraint firstItem="x7W-nn-xtS" firstAttribute="centerY" secondItem="8yz-n7-SnY" secondAttribute="centerY" id="yIY-lT-0OG"/>
                             <constraint firstItem="wJQ-Mu-rGN" firstAttribute="top" secondItem="qDe-L5-qJ4" secondAttribute="top" constant="100" id="yyK-QI-LPA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qDe-L5-qJ4"/>

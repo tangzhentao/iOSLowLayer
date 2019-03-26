@@ -134,7 +134,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = genghaowan;
+				ORGANIZATIONNAME = itang;
 				TargetAttributes = {
 					24EA2FD82243AA03004EE50F = {
 						CreatedOnToolsVersion = 10.1;
@@ -333,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.genghaowan.iOSLowLayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itang.iOSLowLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -349,7 +349,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.genghaowan.iOSLowLayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itang.iOSLowLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

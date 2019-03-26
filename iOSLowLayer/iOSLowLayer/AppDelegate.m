@@ -3,7 +3,7 @@
 //  iOSLowLayer
 //
 //  Created by tang on 2019/3/21.
-//  Copyright © 2019 genghaowan. All rights reserved.
+//  Copyright © 2019 itang. All rights reserved.
 //
 
 #import "AppDelegate.h"

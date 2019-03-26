@@ -1,9 +1,9 @@
 //
-//  MyThread.m
+//  HLWThread.m
 //  LearnRunLoop
 //
 //  Created by tang on 2019/1/20.
-//  Copyright © 2019 genghaowan. All rights reserved.
+//  Copyright © 2019 itang. All rights reserved.
 //
 
 #import "HLWThread.h"

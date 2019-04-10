@@ -26,8 +26,10 @@
     [_dataArray addObjectsFromArray:@[
                                       [LearnItem learnItemWithType:LearnItemTypeRunStopRunLoop title:@"Run Stop RunLoop"],
                                       [LearnItem learnItemWithType:LearnItemTypeLivedThread title:@" Lived Thread"],
+                                      [LearnItem learnItemWithType:LearnItemTypeAsynExecuteTaskInMainQueue title:@"AsynExecuteTaskInMainQueue"],
+                                      [LearnItem learnItemWithType:LearnItemTypeSynExecuteTaskInMainQueue title:@"SynExecuteTaskInMainQueue"],
+                                      [LearnItem learnItemWithType:LearnItemTypeDeadlockWhenSynExecuteTaskInSerialQueue title:@"DeadlockWhenSynExecuteTaskInSerialQueue"],
 
-                            
                                       ]];
     
      [self printRunLoopActivity];
@@ -122,6 +124,75 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+            
+        case LearnItemTypeAsynExecuteTaskInMainQueue:
+        {// 根据是否阻塞主线程，理解syn和asyn
+            
+            
+            /*
+             在主线程中，安排任务在主队列中异步执行不会造成主线程死锁
+             */
+            NSLog(@"AsynExecuteTaskInMainQueue begin...");
+            dispatch_queue_t mainQueue = dispatch_get_main_queue();
+            
+            // 异步
+            dispatch_async(mainQueue, ^{
+                NSLog(@"async perform task, %@", [NSThread currentThread]);
+            });
+            
+            NSLog(@"AsynExecuteTaskInMainQueue end***");
+
+        }
+            break;
+            
+        case LearnItemTypeSynExecuteTaskInMainQueue:
+        {// 根据是否阻塞主线程，理解syn和asyn
+            
+            /*
+             在主线程中，安排任务在主队列中同步执行会造成主线程死锁
+             因为主队列是主线程的任务队列。在主队列中的任务，会在主线程中执行。
+             同步执行主队列中的任务就是：等主队列中的上个任务执行完成后执行该任务。而上个任务就是包含该任务的函数。
+             */
+            NSLog(@"SynExecuteTaskInMainQueue begin...");
+            dispatch_queue_t mainQueue = dispatch_get_main_queue();
+            
+            // 异步
+            dispatch_sync(mainQueue, ^{
+                NSLog(@"sync perform task, %@", [NSThread currentThread]);
+            });
+            
+            NSLog(@"SynExecuteTaskInMainQueue end***");
+            
+        }
+            break;
+            
+        case LearnItemTypeDeadlockWhenSynExecuteTaskInSerialQueue:
+        {
+            /*
+             在串行队列中同步执行任务2时会死锁，如果任务2的上一个任务 任务1包含任务2.
+             因为，同步执行串行队列中的任务时，是要等到队列中的上一个任务执行完成后，才会执行下一个任务。
+             */
+            NSLog(@"Deadlock begin...");
+            
+            dispatch_queue_t serialQueue = dispatch_queue_create("serial queue", DISPATCH_QUEUE_SERIAL);
+            
+            dispatch_async(serialQueue, ^{
+                
+                NSLog(@"task 1");
+                
+                dispatch_sync(serialQueue, ^{
+                    NSLog(@"task 2");
+                });
+            });
+            
+            NSLog(@"Deadlock end***");
+            
+        }
+            break;
+            
+            
+            //
+            
             
         default:
             break;

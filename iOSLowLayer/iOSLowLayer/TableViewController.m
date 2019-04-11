@@ -29,7 +29,7 @@
                                       [LearnItem learnItemWithType:LearnItemTypeAsynExecuteTaskInMainQueue title:@"AsynExecuteTaskInMainQueue"],
                                       [LearnItem learnItemWithType:LearnItemTypeSynExecuteTaskInMainQueue title:@"SynExecuteTaskInMainQueue"],
                                       [LearnItem learnItemWithType:LearnItemTypeDeadlockWhenSynExecuteTaskInSerialQueue title:@"DeadlockWhenSynExecuteTaskInSerialQueue"],
-
+                                      [LearnItem learnItemWithType:LearnItemTypeGlobalQueueIsOneQueue title:@"GlobalQueueIsOneQueue"],
                                       ]];
     
      [self printRunLoopActivity];
@@ -190,7 +190,38 @@
         }
             break;
             
+        case LearnItemTypeGlobalQueueIsOneQueue:
+        {
+            /*
+             获取全局队列时，如果优先级相同，得到的队列也相同。
+             */
             
+            dispatch_queue_t globalQueueBg = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+            dispatch_queue_t globalQueueBg1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+
+            dispatch_queue_t globalQueueLow = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+            dispatch_queue_t globalQueueLow1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+
+            dispatch_queue_t globalQueueDefault = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            dispatch_queue_t globalQueueDefault1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+            dispatch_queue_t globalQueueHight = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+            dispatch_queue_t globalQueueHight1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+
+            NSLog(@"globalQueueBg: %p", globalQueueBg);
+            NSLog(@"globalQueueBg1: %p", globalQueueBg1);
+
+            NSLog(@"globalQueueLow: %p", globalQueueLow);
+            NSLog(@"globalQueueLow1: %p", globalQueueLow1);
+
+            NSLog(@"globalQueueDefault: %p", globalQueueDefault);
+            NSLog(@"globalQueueDefault1: %p", globalQueueDefault1);
+
+            NSLog(@"globalQueueHight: %p", globalQueueHight);
+            NSLog(@"globalQueueHight1: %p", globalQueueHight1);
+
+        }
+            break;
             //
             
             

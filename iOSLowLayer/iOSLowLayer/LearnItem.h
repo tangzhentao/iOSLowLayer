@@ -16,6 +16,10 @@ typedef NS_ENUM(int, LearnItemType)
     LearnItemTypeAsynExecuteTaskInMainQueue, // 在主队列中同步执行任务
     LearnItemTypeDeadlockWhenSynExecuteTaskInSerialQueue, // 在串行队列中同步执行任务的死锁问题
     LearnItemTypeGlobalQueueIsOneQueue, // 在串行队列中同步执行任务的死锁问题
+    LearnItemTypePerformDelayUsingTimerOnRunLoop, // 延迟执行是通过在runloop中添加定时器实现的
+    LearnItemTypeWaitExitedThread, // 等待退出的线程
+    LearnItemTypeGCDGroup, // group
+    LearnItemTypeLock, // 
 
 };
 

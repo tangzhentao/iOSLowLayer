@@ -30,6 +30,11 @@
                                       [LearnItem learnItemWithType:LearnItemTypeSynExecuteTaskInMainQueue title:@"SynExecuteTaskInMainQueue"],
                                       [LearnItem learnItemWithType:LearnItemTypeDeadlockWhenSynExecuteTaskInSerialQueue title:@"DeadlockWhenSynExecuteTaskInSerialQueue"],
                                       [LearnItem learnItemWithType:LearnItemTypeGlobalQueueIsOneQueue title:@"GlobalQueueIsOneQueue"],
+                                      [LearnItem learnItemWithType:LearnItemTypePerformDelayUsingTimerOnRunLoop title:@"PerformDelayUsingTimerOnRunLoop"],
+                                      [LearnItem learnItemWithType:LearnItemTypeWaitExitedThread title:@"WaitExitedThread"],
+                                      [LearnItem learnItemWithType:LearnItemTypeGCDGroup title:@"GCD Group"],
+                                      [LearnItem learnItemWithType:LearnItemTypeLock title:@"Lock"],
+
                                       ]];
     
      [self printRunLoopActivity];
@@ -223,11 +228,116 @@
         }
             break;
             //
+        case LearnItemTypePerformDelayUsingTimerOnRunLoop:
+        {
+            /*
+             打印结果是：
+             task 1
+             task 3
+             并不会打印task 2，因为task2方法没有被执行。
+             
+             performSelector:withObject:afterDelay:
+             是通过使用NSTimer来达到延迟执行的，NSTimer加入到runloop中才会有效，
+             下面的方法没有启动runloop，所以task2不会被执行；
+             因此启动runloop后，task2就会被执行。如，添加一行[[NSRunLoop currentgrRunLoop] run]；
+             */
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            NSLog(@"task 1");
+            dispatch_async(queue, ^{
+                [self performSelector:@selector(task2) withObject:nil afterDelay:.0];
+                
+                
+                [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+            });
+            NSLog(@"task 3");
+
             
+        }
+            break;
+            
+        case LearnItemTypeWaitExitedThread:
+        {
+            /*
+             只会调用task1，因为
+             执行task2时，线程已经释放。等待task2在一个释放的线程中执行完成会闪退；
+             如果，不等待task2执行完成，不会闪退，但也不会打印；
+             */
+            NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(task1) object:nil];
+            [thread start];
+            [self performSelector:@selector(task2) onThread:thread withObject:nil waitUntilDone:YES];
+            
+            
+        }
+            break;
+            
+        case LearnItemTypeGCDGroup:
+        {
+            /*
+             等task 1、2、3都执行完毕后，再执行任务4；
+             */
+            dispatch_group_t group = dispatch_group_create();
+            dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+            
+            dispatch_group_async(group, queue, ^{
+                
+                // task 1
+                for (int i = 0; i < 10; i++) {
+                    NSLog(@"%@: %d", [NSThread currentThread], i);
+                }
+            });
+            
+            dispatch_group_async(group, queue, ^{
+                // task2
+                for (int i = 10; i < 20; i++) {
+                    NSLog(@"%@: %d", [NSThread currentThread], i);
+                }
+            });
+            
+            dispatch_group_async(group, queue, ^{
+                // task 3
+                for (int i = 20; i < 30; i++) {
+                    NSLog(@"%@: %d", [NSThread currentThread], i);
+                }
+            });
+            
+//            dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+            dispatch_group_notify(group, queue, ^{
+                // task 4
+                NSLog(@"%@: all task finished", [NSThread currentThread]);
+
+            });
+            
+            NSLog(@"caller end.");
+            
+        }
+            break;
+            
+        case LearnItemTypeLock:
+        {
+            /*
+             只会调用task1，因为
+             执行task2时，线程已经释放。等待task2在一个释放的线程中执行完成会闪退；
+             如果，不等待task2执行完成，不会闪退，但也不会打印；
+             */
+            UIViewController *vc = [[UIStoryboard storyboardWithName:@"Lock" bundle:nil] instantiateInitialViewController];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+            
+        }
+            break;
             
         default:
             break;
     }
+}
+
+- (void)task1
+{
+    NSLog(@"task 1");
+}
+- (void)task2
+{
+    NSLog(@"task 2");
 }
 
 @end

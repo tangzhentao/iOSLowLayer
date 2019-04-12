@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iHy-x1-fZf">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LockVC-->
+        <scene sceneID="Pyd-lZ-YDY">
+            <objects>
+                <viewController id="iHy-x1-fZf" customClass="LockVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SMs-iK-mFn"/>
+                        <viewControllerLayoutGuide type="bottom" id="pix-6c-3Nx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iU6-aA-Jeb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-xx-ZFW">
+                                <rect key="frame" x="120.5" y="144" width="173" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="  Test Sale Tickets    "/>
+                                <connections>
+                                    <action selector="testSaleTickets:" destination="iHy-x1-fZf" eventType="touchUpInside" id="2da-gy-Dxo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-j2-Mdb">
+                                <rect key="frame" x="95" y="237" width="224" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="  Test Save/Draw money    "/>
+                                <connections>
+                                    <action selector="testSaveDrawMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="QMY-JT-3vl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4zQ-xx-ZFW" firstAttribute="top" secondItem="SMs-iK-mFn" secondAttribute="bottom" constant="100" id="San-yt-hsb"/>
+                            <constraint firstItem="4zQ-xx-ZFW" firstAttribute="centerX" secondItem="iU6-aA-Jeb" secondAttribute="centerX" id="Vr5-d8-Ke7"/>
+                            <constraint firstItem="PsL-j2-Mdb" firstAttribute="centerX" secondItem="iU6-aA-Jeb" secondAttribute="centerX" id="fgI-Kt-0TL"/>
+                            <constraint firstItem="PsL-j2-Mdb" firstAttribute="top" secondItem="4zQ-xx-ZFW" secondAttribute="bottom" constant="58" id="jqF-zw-RLF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IGL-pb-NLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72.463768115942031" y="-141.29464285714286"/>
+        </scene>
+    </scenes>
+</document>

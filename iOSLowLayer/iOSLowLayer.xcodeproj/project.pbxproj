@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240693F52260621500D6F7E9 /* Lock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240693F42260621500D6F7E9 /* Lock.storyboard */; };
+		240693F82260623100D6F7E9 /* LockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 240693F72260623100D6F7E9 /* LockVC.m */; };
 		2408DC872244746300F8F720 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC862244746300F8F720 /* TableViewController.m */; };
 		2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC8C2244787A00F8F720 /* HLWThread.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
@@ -22,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240693F42260621500D6F7E9 /* Lock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lock.storyboard; sourceTree = "<group>"; };
+		240693F62260623100D6F7E9 /* LockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockVC.h; sourceTree = "<group>"; };
+		240693F72260623100D6F7E9 /* LockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockVC.m; sourceTree = "<group>"; };
 		2408DC852244746300F8F720 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		2408DC862244746300F8F720 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		2408DC8B2244787900F8F720 /* HLWThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWThread.h; sourceTree = "<group>"; };
@@ -56,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		240693F3226061D700D6F7E9 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				240693F42260621500D6F7E9 /* Lock.storyboard */,
+				240693F62260623100D6F7E9 /* LockVC.h */,
+				240693F72260623100D6F7E9 /* LockVC.m */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
 		24AD78752248AFB100520B8E /* LivedThread */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +112,7 @@
 				24AD7873224888C900520B8E /* LearnItem.m */,
 				24EA2FDF2243AA03004EE50F /* RunStopRunLoopVC.h */,
 				24EA2FE02243AA03004EE50F /* RunStopRunLoopVC.m */,
+				240693F3226061D700D6F7E9 /* Lock */,
 				24AD78752248AFB100520B8E /* LivedThread */,
 				24EA2FE22243AA03004EE50F /* Main.storyboard */,
 				24EA2FE52243AA06004EE50F /* Assets.xcassets */,
@@ -168,6 +184,7 @@
 				24EA2FE92243AA06004EE50F /* LaunchScreen.storyboard in Resources */,
 				24EA2FE62243AA06004EE50F /* Assets.xcassets in Resources */,
 				24EA2FE42243AA03004EE50F /* Main.storyboard in Resources */,
+				240693F52260621500D6F7E9 /* Lock.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +198,7 @@
 				24EA2FE12243AA03004EE50F /* RunStopRunLoopVC.m in Sources */,
 				24EA2FEC2243AA06004EE50F /* main.m in Sources */,
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
+				240693F82260623100D6F7E9 /* LockVC.m in Sources */,
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,
 				2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */,

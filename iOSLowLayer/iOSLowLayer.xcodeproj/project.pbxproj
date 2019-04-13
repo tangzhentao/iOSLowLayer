@@ -11,6 +11,7 @@
 		240693F82260623100D6F7E9 /* LockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 240693F72260623100D6F7E9 /* LockVC.m */; };
 		2408DC872244746300F8F720 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC862244746300F8F720 /* TableViewController.m */; };
 		2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC8C2244787A00F8F720 /* HLWThread.m */; };
+		2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469442B2261FDA0003B36BA /* MutexDemo.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
 		24AD7874224888C900520B8E /* LearnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD7873224888C900520B8E /* LearnItem.m */; };
 		24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD78772248B01100520B8E /* TestLivedThreadVC.m */; };
@@ -34,6 +35,8 @@
 		2408DC862244746300F8F720 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		2408DC8B2244787900F8F720 /* HLWThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWThread.h; sourceTree = "<group>"; };
 		2408DC8C2244787A00F8F720 /* HLWThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWThread.m; sourceTree = "<group>"; };
+		2469442A2261FDA0003B36BA /* MutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo.h; sourceTree = "<group>"; };
+		2469442B2261FDA0003B36BA /* MutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo.m; sourceTree = "<group>"; };
 		24AD786F22486E6D00520B8E /* HLWLivedThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWLivedThread.h; sourceTree = "<group>"; };
 		24AD787022486E6D00520B8E /* HLWLivedThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLWLivedThread.m; sourceTree = "<group>"; };
 		24AD7872224888C900520B8E /* LearnItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnItem.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				24DBFA912261EA5A00810BBD /* SpinLockDemo.m */,
 				24DBFA932261F01600810BBD /* UnfairLockDemo.h */,
 				24DBFA942261F01600810BBD /* UnfairLockDemo.m */,
+				2469442A2261FDA0003B36BA /* MutexDemo.h */,
+				2469442B2261FDA0003B36BA /* MutexDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				24DBFA8F2261E86700810BBD /* LockDemo.m in Sources */,
 				24EA2FEC2243AA06004EE50F /* main.m in Sources */,
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
+				2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */,
 				240693F82260623100D6F7E9 /* LockVC.m in Sources */,
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,

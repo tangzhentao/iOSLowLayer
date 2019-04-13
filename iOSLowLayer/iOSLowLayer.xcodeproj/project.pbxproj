@@ -17,6 +17,7 @@
 		24AD787C2248B03C00520B8E /* TestLivedThreadVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AD787B2248B03C00520B8E /* TestLivedThreadVC.storyboard */; };
 		24DBFA8F2261E86700810BBD /* LockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DBFA8E2261E86700810BBD /* LockDemo.m */; };
 		24DBFA922261EA5A00810BBD /* SpinLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DBFA912261EA5A00810BBD /* SpinLockDemo.m */; };
+		24DBFA952261F01600810BBD /* UnfairLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DBFA942261F01600810BBD /* UnfairLockDemo.m */; };
 		24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EA2FDD2243AA03004EE50F /* AppDelegate.m */; };
 		24EA2FE12243AA03004EE50F /* RunStopRunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EA2FE02243AA03004EE50F /* RunStopRunLoopVC.m */; };
 		24EA2FE42243AA03004EE50F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24EA2FE22243AA03004EE50F /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		24DBFA8E2261E86700810BBD /* LockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockDemo.m; sourceTree = "<group>"; };
 		24DBFA902261EA5A00810BBD /* SpinLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpinLockDemo.h; sourceTree = "<group>"; };
 		24DBFA912261EA5A00810BBD /* SpinLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpinLockDemo.m; sourceTree = "<group>"; };
+		24DBFA932261F01600810BBD /* UnfairLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnfairLockDemo.h; sourceTree = "<group>"; };
+		24DBFA942261F01600810BBD /* UnfairLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnfairLockDemo.m; sourceTree = "<group>"; };
 		24EA2FD92243AA03004EE50F /* iOSLowLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSLowLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24EA2FDC2243AA03004EE50F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24EA2FDD2243AA03004EE50F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +80,8 @@
 				24DBFA8E2261E86700810BBD /* LockDemo.m */,
 				24DBFA902261EA5A00810BBD /* SpinLockDemo.h */,
 				24DBFA912261EA5A00810BBD /* SpinLockDemo.m */,
+				24DBFA932261F01600810BBD /* UnfairLockDemo.h */,
+				24DBFA942261F01600810BBD /* UnfairLockDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */,
 				24AD7874224888C900520B8E /* LearnItem.m in Sources */,
 				2408DC872244746300F8F720 /* TableViewController.m in Sources */,
+				24DBFA952261F01600810BBD /* UnfairLockDemo.m in Sources */,
 				24DBFA922261EA5A00810BBD /* SpinLockDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

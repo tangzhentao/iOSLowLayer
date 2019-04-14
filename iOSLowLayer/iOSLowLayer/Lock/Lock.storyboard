@@ -58,16 +58,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijb-0a-tKj">
-                                <rect key="frame" x="10" y="204" width="160" height="35"/>
+                                <rect key="frame" x="10" y="204" width="164" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock ticket  "/>
+                                <state key="normal" title="  mutex lock ticket  "/>
+                                <connections>
+                                    <action selector="testMutexLockTicke:" destination="iHy-x1-fZf" eventType="touchUpInside" id="b0T-IF-Nl4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-lf-hrf">
-                                <rect key="frame" x="233" y="204" width="171" height="35"/>
+                                <rect key="frame" x="229" y="204" width="175" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock money  "/>
+                                <state key="normal" title="  mutex lock money  "/>
+                                <connections>
+                                    <action selector="testMutexLockMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="4UH-xp-7W7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAE-xE-f5h">
                                 <rect key="frame" x="10" y="269" width="160" height="35"/>

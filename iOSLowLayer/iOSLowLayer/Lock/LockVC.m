@@ -9,6 +9,7 @@
 #import "LockVC.h"
 #import "SpinLockDemo.h"
 #import "UnfairLockDemo.h"
+#import "MutexDemo.h"
 
 @interface LockVC ()
 
@@ -46,5 +47,27 @@
 {
     [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
 }
+
+- (IBAction)testMutexLockTicke:(id)sender
+{
+    [[[MutexDemo alloc] init] testSaleTickets];
+}
+
+- (IBAction)testMutexLockMoney:(id)sender
+{
+    [[[MutexDemo alloc] init] testSaveDrawMoney];
+}
+
+- (IBAction)testLockTicke:(id)sender
+{
+    [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
+}
+
+- (IBAction)testLockMoney:(id)sender
+{
+    [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
+}
+
+
 
 @end

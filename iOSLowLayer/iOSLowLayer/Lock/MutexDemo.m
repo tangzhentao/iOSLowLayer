@@ -11,8 +11,8 @@
 
 @interface MutexDemo ()
 
-@property (assign, nonatomic) pth saleTicketLock; // 自旋锁
-@property (assign, nonatomic) OSSpinLock accountLock; // 自旋锁
+@property (assign, nonatomic) pthread_mutex_t saleTicketLock; // 自旋锁
+@property (assign, nonatomic) pthread_mutex_t accountLock; // 自旋锁
 
 @end
 
@@ -23,37 +23,51 @@
     self = [super init];
     if (self)
     {
-        _saleTicketLock = OS_SPINLOCK_INIT;
-        _accountLock = OS_SPINLOCK_INIT;
+        [self initLock:&_saleTicketLock];
+        [self initLock:&_accountLock];
     }
     return self;
 }
 
+- (void)initLock:(pthread_mutex_t *)lock
+{
+    // 初始化互斥锁的属性
+    pthread_mutexattr_t attr;
+    pthread_mutexattr_init(&attr);
+    pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_NORMAL);
+    
+    // 初始化互斥锁
+    pthread_mutex_init(lock, &attr);
+    
+    // 销毁互斥锁属性
+    pthread_mutexattr_destroy(&attr);
+}
+
 - (void)saleTicket
 {
-    OSSpinLockLock(&_saleTicketLock);
+    pthread_mutex_lock(&_saleTicketLock);
     
     [super saleTicket];
     
-    OSSpinLockUnlock(&_saleTicketLock);
+    pthread_mutex_unlock(&_saleTicketLock);
 }
 
 - (void)saveMoney
 {
-    OSSpinLockLock(&_accountLock);
+    pthread_mutex_lock(&_accountLock);
     
     [super saveMoney];
     
-    OSSpinLockUnlock(&_accountLock);
+    pthread_mutex_unlock(&_accountLock);
 }
 
 - (void)drawMoney
 {
-    OSSpinLockLock(&_accountLock);
+    pthread_mutex_lock(&_accountLock);
     
     [super drawMoney];
     
-    OSSpinLockUnlock(&_accountLock);
+    pthread_mutex_unlock(&_accountLock);
 }
 
 @end

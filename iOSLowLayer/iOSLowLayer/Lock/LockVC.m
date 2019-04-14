@@ -10,6 +10,7 @@
 #import "SpinLockDemo.h"
 #import "UnfairLockDemo.h"
 #import "MutexDemo.h"
+#import "RecursiveMutexLockDemo.h"
 
 @interface LockVC ()
 
@@ -58,6 +59,16 @@
     [[[MutexDemo alloc] init] testSaveDrawMoney];
 }
 
+- (IBAction)testMutexLockMainTask:(id)sender
+{
+    [[[RecursiveMutexLockDemo alloc] init] mainTask];
+}
+
+- (IBAction)testMutexLockRecursiveTask:(id)sender
+{
+    [[[RecursiveMutexLockDemo alloc] init] recursiveTask];
+}
+
 - (IBAction)testLockTicke:(id)sender
 {
     [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
@@ -67,6 +78,7 @@
 {
     [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
 }
+
 
 
 

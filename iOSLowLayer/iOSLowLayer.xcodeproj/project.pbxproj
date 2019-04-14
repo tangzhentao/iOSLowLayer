@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240025872262E3B1003FF26C /* RecursiveMutexLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 240025862262E3B1003FF26C /* RecursiveMutexLockDemo.m */; };
 		240693F52260621500D6F7E9 /* Lock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 240693F42260621500D6F7E9 /* Lock.storyboard */; };
 		240693F82260623100D6F7E9 /* LockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 240693F72260623100D6F7E9 /* LockVC.m */; };
 		2408DC872244746300F8F720 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC862244746300F8F720 /* TableViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		240025852262E3B1003FF26C /* RecursiveMutexLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecursiveMutexLockDemo.h; sourceTree = "<group>"; };
+		240025862262E3B1003FF26C /* RecursiveMutexLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecursiveMutexLockDemo.m; sourceTree = "<group>"; };
 		240693F42260621500D6F7E9 /* Lock.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lock.storyboard; sourceTree = "<group>"; };
 		240693F62260623100D6F7E9 /* LockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockVC.h; sourceTree = "<group>"; };
 		240693F72260623100D6F7E9 /* LockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockVC.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				24DBFA942261F01600810BBD /* UnfairLockDemo.m */,
 				2469442A2261FDA0003B36BA /* MutexDemo.h */,
 				2469442B2261FDA0003B36BA /* MutexDemo.m */,
+				240025852262E3B1003FF26C /* RecursiveMutexLockDemo.h */,
+				240025862262E3B1003FF26C /* RecursiveMutexLockDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
 				2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */,
 				240693F82260623100D6F7E9 /* LockVC.m in Sources */,
+				240025872262E3B1003FF26C /* RecursiveMutexLockDemo.m in Sources */,
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,
 				2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */,

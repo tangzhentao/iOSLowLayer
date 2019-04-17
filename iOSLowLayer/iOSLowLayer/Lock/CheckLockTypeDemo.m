@@ -8,10 +8,12 @@
 
 #import "CheckLockTypeDemo.h"
 #import <libkern/OSAtomic.h>
+#import <pthread.h>
 
 @interface CheckLockTypeDemo ()
 
 @property (assign, nonatomic) OSSpinLock saleTicketLock; // 自旋锁
+@property (assign, nonatomic) pthread_mutex_t mutexLock; // 互斥锁
 
 @end
 
@@ -24,6 +26,12 @@
     {
         _saleTicketLock = OS_SPINLOCK_INIT;
         self.ticketSum = 20;
+        
+        // 初始化互斥锁
+        pthread_mutexattr_t attr;
+        pthread_mutexattr_init(&attr);
+        pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_DEFAULT);
+        pthread_mutex_init(&_mutexLock, &attr);
 
     }
     return self;
@@ -37,13 +45,16 @@
 - (void)saleTicket
 {
     NSLog(@"[%@ %@]: out of lock.", [self class], NSStringFromSelector(_cmd));
-    OSSpinLockLock(&_saleTicketLock);
+//    OSSpinLockLock(&_saleTicketLock);
+    pthread_mutex_lock(&_mutexLock);
     NSLog(@"[%@ %@]: enter into lock.", [self class], NSStringFromSelector(_cmd));
     
     [super saleTicket];
     
     sleep(1000);
-    OSSpinLockUnlock(&_saleTicketLock);
+//    OSSpinLockUnlock(&_saleTicketLock);
+    pthread_mutex_unlock(&_mutexLock);
+
     NSLog(@"[%@ %@]: finish", [self class], NSStringFromSelector(_cmd));
 
 }

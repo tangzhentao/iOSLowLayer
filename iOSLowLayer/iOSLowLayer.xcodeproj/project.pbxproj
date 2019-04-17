@@ -13,6 +13,7 @@
 		2408DC872244746300F8F720 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC862244746300F8F720 /* TableViewController.m */; };
 		2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC8C2244787A00F8F720 /* HLWThread.m */; };
 		2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469442B2261FDA0003B36BA /* MutexDemo.m */; };
+		24ACE892226459FE000B9054 /* CheckLockTypeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
 		24AD7874224888C900520B8E /* LearnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD7873224888C900520B8E /* LearnItem.m */; };
 		24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD78772248B01100520B8E /* TestLivedThreadVC.m */; };
@@ -40,6 +41,8 @@
 		2408DC8C2244787A00F8F720 /* HLWThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWThread.m; sourceTree = "<group>"; };
 		2469442A2261FDA0003B36BA /* MutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo.h; sourceTree = "<group>"; };
 		2469442B2261FDA0003B36BA /* MutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo.m; sourceTree = "<group>"; };
+		24ACE890226459FE000B9054 /* CheckLockTypeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckLockTypeDemo.h; sourceTree = "<group>"; };
+		24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckLockTypeDemo.m; sourceTree = "<group>"; };
 		24AD786F22486E6D00520B8E /* HLWLivedThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWLivedThread.h; sourceTree = "<group>"; };
 		24AD787022486E6D00520B8E /* HLWLivedThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLWLivedThread.m; sourceTree = "<group>"; };
 		24AD7872224888C900520B8E /* LearnItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnItem.h; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				2469442B2261FDA0003B36BA /* MutexDemo.m */,
 				240025852262E3B1003FF26C /* RecursiveMutexLockDemo.h */,
 				240025862262E3B1003FF26C /* RecursiveMutexLockDemo.m */,
+				24ACE890226459FE000B9054 /* CheckLockTypeDemo.h */,
+				24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				24EA2FE12243AA03004EE50F /* RunStopRunLoopVC.m in Sources */,
 				24DBFA8F2261E86700810BBD /* LockDemo.m in Sources */,
 				24EA2FEC2243AA06004EE50F /* main.m in Sources */,
+				24ACE892226459FE000B9054 /* CheckLockTypeDemo.m in Sources */,
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
 				2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */,
 				240693F82260623100D6F7E9 /* LockVC.m in Sources */,
@@ -376,14 +382,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AMQ984D26F;
 				INFOPLIST_FILE = iOSLowLayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itang.iOSLowLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -392,14 +400,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AMQ984D26F;
 				INFOPLIST_FILE = iOSLowLayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.itang.iOSLowLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

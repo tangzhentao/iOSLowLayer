@@ -94,10 +94,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE9-Av-w9t">
-                                <rect key="frame" x="233" y="334" width="171" height="35"/>
+                                <rect key="frame" x="338" y="334" width="66" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock money  "/>
+                                <state key="normal" title="  again  "/>
+                                <connections>
+                                    <action selector="checkLockTypeAgain:" destination="iHy-x1-fZf" eventType="touchUpInside" id="vtw-K7-NQL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-nX-9id">
                                 <rect key="frame" x="10" y="659" width="160" height="35"/>
@@ -160,10 +163,13 @@
                                 <state key="normal" title="  unfair lock money  "/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l99-H4-zRa">
-                                <rect key="frame" x="10" y="334" width="160" height="35"/>
+                                <rect key="frame" x="10" y="334" width="154" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock ticket  "/>
+                                <state key="normal" title="  check lock type  "/>
+                                <connections>
+                                    <action selector="checkLockType:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Oms-On-kW1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

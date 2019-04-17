@@ -10,7 +10,6 @@
 
 @interface LockDemo ()
 
-@property (assign, nonatomic) NSUInteger ticketSum;
 @property (assign, nonatomic) NSInteger accountBalance;
 
 @end

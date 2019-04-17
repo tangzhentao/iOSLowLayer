@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LockDemo : NSObject
 
+@property (assign, nonatomic) NSUInteger ticketSum;
+
+
 - (void)testSaleTickets;
 - (void)saleTicket;
 

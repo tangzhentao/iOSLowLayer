@@ -11,9 +11,11 @@
 #import "UnfairLockDemo.h"
 #import "MutexDemo.h"
 #import "RecursiveMutexLockDemo.h"
+#import "CheckLockTypeDemo.h"
 
 @interface LockVC ()
 
+@property (strong, nonatomic) CheckLockTypeDemo *checkTypeDemo;
 
 @end
 
@@ -67,6 +69,28 @@
 - (IBAction)testMutexLockRecursiveTask:(id)sender
 {
     [[[RecursiveMutexLockDemo alloc] init] recursiveTask];
+}
+
+- (IBAction)checkLockType:(id)sender
+{
+    if (!_checkTypeDemo)
+    {
+        _checkTypeDemo = [[CheckLockTypeDemo alloc] init];
+    }
+    
+    [_checkTypeDemo check];
+    
+}
+
+- (IBAction)checkLockTypeAgain:(id)sender
+{
+    if (!_checkTypeDemo)
+    {
+        _checkTypeDemo = [[CheckLockTypeDemo alloc] init];
+    }
+    
+    [_checkTypeDemo check];
+    
 }
 
 - (IBAction)testLockTicke:(id)sender

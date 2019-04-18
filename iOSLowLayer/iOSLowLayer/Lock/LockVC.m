@@ -12,10 +12,17 @@
 #import "MutexDemo.h"
 #import "RecursiveMutexLockDemo.h"
 #import "CheckLockTypeDemo.h"
+#import "ConditionMutexLockDemo.h"
+#import "HLWLivedThread.h"
 
 @interface LockVC ()
 
 @property (strong, nonatomic) CheckLockTypeDemo *checkTypeDemo;
+
+@property (strong, nonatomic) ConditionMutexLockDemo *conditionMutexLockDemo;
+@property (strong, nonatomic) HLWLivedThread *addThread;
+@property (strong, nonatomic) HLWLivedThread *removeThreadA;
+@property (strong, nonatomic) HLWLivedThread *removeThreadB;
 
 @end
 
@@ -90,6 +97,66 @@
     }
     
     [_checkTypeDemo check];
+    
+}
+
+- (IBAction)add:(id)sender
+{
+    if (!_conditionMutexLockDemo)
+    {
+        _conditionMutexLockDemo = [[ConditionMutexLockDemo alloc] init];
+    }
+    
+    if (!_addThread)
+    {
+        _addThread = [[HLWLivedThread alloc] init];
+        _addThread.name = @"adder";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_addThread asynPerformBlock:^{
+        [weakSelf.conditionMutexLockDemo addData];
+    }];
+    
+}
+
+- (IBAction)removeA:(id)sender
+{
+    if (!_conditionMutexLockDemo)
+    {
+        _conditionMutexLockDemo = [[ConditionMutexLockDemo alloc] init];
+    }
+    
+    if (!_removeThreadA)
+    {
+        _removeThreadA = [[HLWLivedThread alloc] init];
+        _removeThreadA.name = @"remover A";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_removeThreadA asynPerformBlock:^{
+        [weakSelf.conditionMutexLockDemo removeData];
+    }];
+    
+}
+
+- (IBAction)removeB:(id)sender
+{
+    if (!_conditionMutexLockDemo)
+    {
+        _conditionMutexLockDemo = [[ConditionMutexLockDemo alloc] init];
+    }
+    
+    if (!_removeThreadB)
+    {
+        _removeThreadB = [[HLWLivedThread alloc] init];
+        _removeThreadB.name = @"remover B";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_removeThreadB asynPerformBlock:^{
+        [weakSelf.conditionMutexLockDemo removeData];
+    }];
     
 }
 

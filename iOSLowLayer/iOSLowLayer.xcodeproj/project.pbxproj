@@ -27,6 +27,7 @@
 		24EA2FE62243AA06004EE50F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24EA2FE52243AA06004EE50F /* Assets.xcassets */; };
 		24EA2FE92243AA06004EE50F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24EA2FE72243AA06004EE50F /* LaunchScreen.storyboard */; };
 		24EA2FEC2243AA06004EE50F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24EA2FEB2243AA06004EE50F /* main.m */; };
+		24F62AF22268067E00BD5A77 /* ConditionMutexLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24F62AF12268067E00BD5A77 /* ConditionMutexLockDemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,8 @@
 		24EA2FE82243AA06004EE50F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24EA2FEA2243AA06004EE50F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24EA2FEB2243AA06004EE50F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24F62AF02268067E00BD5A77 /* ConditionMutexLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConditionMutexLockDemo.h; sourceTree = "<group>"; };
+		24F62AF12268067E00BD5A77 /* ConditionMutexLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConditionMutexLockDemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				240025862262E3B1003FF26C /* RecursiveMutexLockDemo.m */,
 				24ACE890226459FE000B9054 /* CheckLockTypeDemo.h */,
 				24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */,
+				24F62AF02268067E00BD5A77 /* ConditionMutexLockDemo.h */,
+				24F62AF12268067E00BD5A77 /* ConditionMutexLockDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,
 				2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */,
+				24F62AF22268067E00BD5A77 /* ConditionMutexLockDemo.m in Sources */,
 				24AD7874224888C900520B8E /* LearnItem.m in Sources */,
 				2408DC872244746300F8F720 /* TableViewController.m in Sources */,
 				24DBFA952261F01600810BBD /* UnfairLockDemo.m in Sources */,

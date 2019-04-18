@@ -115,16 +115,22 @@
                                 <state key="normal" title="  unfair lock money  "/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-XG-1KY">
-                                <rect key="frame" x="10" y="399" width="160" height="35"/>
+                                <rect key="frame" x="10" y="399" width="72" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock ticket  "/>
+                                <state key="normal" title="    add    "/>
+                                <connections>
+                                    <action selector="add:" destination="iHy-x1-fZf" eventType="touchUpInside" id="1QF-qi-7hO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tln-fM-CwL">
-                                <rect key="frame" x="233" y="399" width="171" height="35"/>
+                                <rect key="frame" x="284" y="399" width="120" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock money  "/>
+                                <state key="normal" title="    remove B    "/>
+                                <connections>
+                                    <action selector="removeB:" destination="iHy-x1-fZf" eventType="touchUpInside" id="mQj-dV-ww0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKl-nA-ofI">
                                 <rect key="frame" x="10" y="464" width="160" height="35"/>
@@ -171,10 +177,20 @@
                                     <action selector="checkLockType:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Oms-On-kW1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-to-Zfg">
+                                <rect key="frame" x="144" y="399" width="115" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="    remove A   "/>
+                                <connections>
+                                    <action selector="removeA:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Sja-7B-TJO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OE9-Av-w9t" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="1B7-po-0ZU"/>
+                            <constraint firstItem="Tln-fM-CwL" firstAttribute="leading" secondItem="kOx-to-Zfg" secondAttribute="trailing" constant="25" id="1si-Fr-s5K"/>
                             <constraint firstItem="E2t-fv-lWA" firstAttribute="top" secondItem="Tln-fM-CwL" secondAttribute="bottom" constant="30" id="2LH-hI-Kiz"/>
                             <constraint firstItem="AAE-xE-f5h" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="2Qe-34-4O6"/>
                             <constraint firstItem="Ijb-0a-tKj" firstAttribute="top" secondItem="npi-VU-wIE" secondAttribute="bottom" constant="30" id="2Y2-yp-krz"/>
@@ -182,6 +198,7 @@
                             <constraint firstItem="LKl-nA-ofI" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="2iI-Jw-yNL"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="top" secondItem="U8W-VZ-82F" secondAttribute="bottom" constant="30" id="3NC-pY-B4P"/>
                             <constraint firstItem="OE9-Av-w9t" firstAttribute="top" secondItem="lko-za-p6z" secondAttribute="bottom" constant="30" id="3WI-1e-TZk"/>
+                            <constraint firstItem="Tln-fM-CwL" firstAttribute="centerY" secondItem="kOx-to-Zfg" secondAttribute="centerY" id="5Kp-Hb-xB9"/>
                             <constraint firstItem="9ab-lf-hrf" firstAttribute="top" secondItem="gxe-lX-jMb" secondAttribute="bottom" constant="30" id="6o0-3X-cuP"/>
                             <constraint firstItem="smW-OW-bCJ" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="7x3-gY-8z3"/>
                             <constraint firstItem="lko-za-p6z" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="9fR-8z-ghi"/>

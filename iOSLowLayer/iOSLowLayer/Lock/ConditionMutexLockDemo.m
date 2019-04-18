@@ -63,10 +63,14 @@
     // 添加数据
     [_dataArray addObject:@"test data"];
     NSLog(@"%@ > 添加了一条数据", [NSThread currentThread].name);
-    // 发信号
-//    pthread_cond_signal(&_condition);
-    pthread_cond_broadcast(&_condition);
-    NSLog(@"%@ > 发了一个信号", [NSThread currentThread].name);
+    
+    // 单发信号：疏通(unblock)一个等待条件_condition的线程
+    pthread_cond_signal(&_condition);
+    NSLog(@"%@ > 单发了信号", [NSThread currentThread].name);
+
+    // 广播信号：疏通所有等待条件_condition的线程
+//    pthread_cond_broadcast(&_condition);
+//    NSLog(@"%@ > 广播了信号", [NSThread currentThread].name);
 
     // 解锁
     pthread_mutex_unlock(&_mutexLock);
@@ -101,6 +105,7 @@
 
     // 解锁
     pthread_mutex_unlock(&_mutexLock);
+
 }
 
 @end

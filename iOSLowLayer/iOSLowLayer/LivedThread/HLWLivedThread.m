@@ -37,7 +37,26 @@
 - (void)addPortAndRun
 {
     [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+        
     CFRunLoopRunInMode(kCFRunLoopDefaultMode, 1.0e10, false);
+}
+
+- (void)observeThreadStatus
+{
+    CFOptionFlags activities = kCFRunLoopBeforeWaiting | kCFRunLoopAfterWaiting;
+    
+    __weak typeof(self) weakSelf = self;
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(kCFAllocatorDefault, activities, true, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        
+        if (kCFRunLoopBeforeWaiting == activity)
+        {
+            NSLog(@"%@ > will sleep", weakSelf.name);
+        } else if (kCFRunLoopAfterWaiting == activity)
+        {
+            NSLog(@"%@ > wake up", weakSelf.name);
+        }
+    });
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopDefaultMode);
 }
 
 - (void)asynPerformBlock:(void (^)(void))taskBlock

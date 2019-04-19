@@ -12,6 +12,9 @@
 		240693F82260623100D6F7E9 /* LockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 240693F72260623100D6F7E9 /* LockVC.m */; };
 		2408DC872244746300F8F720 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC862244746300F8F720 /* TableViewController.m */; };
 		2408DC8D2244787A00F8F720 /* HLWThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 2408DC8C2244787A00F8F720 /* HLWThread.m */; };
+		24238CBC2269569300FC415F /* NSLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CBB2269569300FC415F /* NSLockDemo.m */; };
+		24238CBF226964C300FC415F /* NSRecursiveLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CBE226964C300FC415F /* NSRecursiveLockDemo.m */; };
+		24238CC222696BE300FC415F /* NSConditionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CC122696BE300FC415F /* NSConditionDemo.m */; };
 		2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469442B2261FDA0003B36BA /* MutexDemo.m */; };
 		24ACE892226459FE000B9054 /* CheckLockTypeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
@@ -40,6 +43,12 @@
 		2408DC862244746300F8F720 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		2408DC8B2244787900F8F720 /* HLWThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWThread.h; sourceTree = "<group>"; };
 		2408DC8C2244787A00F8F720 /* HLWThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWThread.m; sourceTree = "<group>"; };
+		24238CBA2269569300FC415F /* NSLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSLockDemo.h; sourceTree = "<group>"; };
+		24238CBB2269569300FC415F /* NSLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSLockDemo.m; sourceTree = "<group>"; };
+		24238CBD226964C300FC415F /* NSRecursiveLockDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRecursiveLockDemo.h; sourceTree = "<group>"; };
+		24238CBE226964C300FC415F /* NSRecursiveLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRecursiveLockDemo.m; sourceTree = "<group>"; };
+		24238CC022696BE300FC415F /* NSConditionDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSConditionDemo.h; sourceTree = "<group>"; };
+		24238CC122696BE300FC415F /* NSConditionDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSConditionDemo.m; sourceTree = "<group>"; };
 		2469442A2261FDA0003B36BA /* MutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo.h; sourceTree = "<group>"; };
 		2469442B2261FDA0003B36BA /* MutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo.m; sourceTree = "<group>"; };
 		24ACE890226459FE000B9054 /* CheckLockTypeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckLockTypeDemo.h; sourceTree = "<group>"; };
@@ -102,6 +111,12 @@
 				24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */,
 				24F62AF02268067E00BD5A77 /* ConditionMutexLockDemo.h */,
 				24F62AF12268067E00BD5A77 /* ConditionMutexLockDemo.m */,
+				24238CBA2269569300FC415F /* NSLockDemo.h */,
+				24238CBB2269569300FC415F /* NSLockDemo.m */,
+				24238CBD226964C300FC415F /* NSRecursiveLockDemo.h */,
+				24238CBE226964C300FC415F /* NSRecursiveLockDemo.m */,
+				24238CC022696BE300FC415F /* NSConditionDemo.h */,
+				24238CC122696BE300FC415F /* NSConditionDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -237,6 +252,8 @@
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
 				2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */,
 				240693F82260623100D6F7E9 /* LockVC.m in Sources */,
+				24238CC222696BE300FC415F /* NSConditionDemo.m in Sources */,
+				24238CBF226964C300FC415F /* NSRecursiveLockDemo.m in Sources */,
 				240025872262E3B1003FF26C /* RecursiveMutexLockDemo.m in Sources */,
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,
@@ -245,6 +262,7 @@
 				24AD7874224888C900520B8E /* LearnItem.m in Sources */,
 				2408DC872244746300F8F720 /* TableViewController.m in Sources */,
 				24DBFA952261F01600810BBD /* UnfairLockDemo.m in Sources */,
+				24238CBC2269569300FC415F /* NSLockDemo.m in Sources */,
 				24DBFA922261EA5A00810BBD /* SpinLockDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

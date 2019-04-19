@@ -133,40 +133,58 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKl-nA-ofI">
-                                <rect key="frame" x="10" y="464" width="160" height="35"/>
+                                <rect key="frame" x="10" y="464" width="138" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock ticket  "/>
+                                <state key="normal" title="  NSLock ticket  "/>
+                                <connections>
+                                    <action selector="testNSLockTicke:" destination="iHy-x1-fZf" eventType="touchUpInside" id="2De-O5-xwK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-fv-lWA">
-                                <rect key="frame" x="233" y="464" width="171" height="35"/>
+                                <rect key="frame" x="251" y="464" width="153" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock money  "/>
+                                <state key="normal" title="   NSLock money  "/>
+                                <connections>
+                                    <action selector="testNSLockMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="VfO-HW-c4N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smW-OW-bCJ">
-                                <rect key="frame" x="10" y="529" width="160" height="35"/>
+                                <rect key="frame" x="10" y="529" width="138" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock ticket  "/>
+                                <state key="normal" title="  main sub task  "/>
+                                <connections>
+                                    <action selector="testMainTaskSubtask:" destination="iHy-x1-fZf" eventType="touchUpInside" id="8oT-zR-Pjp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpf-tT-srj">
-                                <rect key="frame" x="233" y="529" width="171" height="35"/>
+                                <rect key="frame" x="246" y="529" width="158" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock money  "/>
+                                <state key="normal" title="    recursive task    "/>
+                                <connections>
+                                    <action selector="testRecursiveTask:" destination="iHy-x1-fZf" eventType="touchUpInside" id="NFb-iR-DYB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbO-gG-aeY">
-                                <rect key="frame" x="10" y="594" width="160" height="35"/>
+                                <rect key="frame" x="10" y="594" width="80" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock ticket  "/>
+                                <state key="normal" title="    add1    "/>
+                                <connections>
+                                    <action selector="add1:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Zv1-2q-5C4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8W-VZ-82F">
-                                <rect key="frame" x="233" y="594" width="171" height="35"/>
+                                <rect key="frame" x="276" y="594" width="128" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  unfair lock money  "/>
+                                <state key="normal" title="    remove1 B    "/>
+                                <connections>
+                                    <action selector="removeB1:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Pta-TO-Gp0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l99-H4-zRa">
                                 <rect key="frame" x="10" y="334" width="154" height="35"/>
@@ -184,6 +202,15 @@
                                 <state key="normal" title="    remove A   "/>
                                 <connections>
                                     <action selector="removeA:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Sja-7B-TJO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j60-dm-l47">
+                                <rect key="frame" x="137" y="594" width="123" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="    remove1 A   "/>
+                                <connections>
+                                    <action selector="removeA1:" destination="iHy-x1-fZf" eventType="touchUpInside" id="c3d-E1-3ex"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -216,6 +243,7 @@
                             <constraint firstItem="E2t-fv-lWA" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="RZa-Sv-A6O"/>
                             <constraint firstItem="LKl-nA-ofI" firstAttribute="top" secondItem="C4s-XG-1KY" secondAttribute="bottom" constant="30" id="Rfr-hx-3F8"/>
                             <constraint firstItem="npi-VU-wIE" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="Wgz-CB-Sjr"/>
+                            <constraint firstItem="U8W-VZ-82F" firstAttribute="leading" secondItem="j60-dm-l47" secondAttribute="trailing" constant="16" id="Zkb-bL-IGy"/>
                             <constraint firstItem="Tln-fM-CwL" firstAttribute="top" secondItem="OE9-Av-w9t" secondAttribute="bottom" constant="30" id="a4Q-jF-5Td"/>
                             <constraint firstItem="lko-za-p6z" firstAttribute="top" secondItem="9ab-lf-hrf" secondAttribute="bottom" constant="30" id="arh-wm-Mkm"/>
                             <constraint firstItem="oHa-nX-9id" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="bBx-Ed-034"/>
@@ -231,6 +259,7 @@
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="rci-aW-oAG"/>
                             <constraint firstItem="gxe-lX-jMb" firstAttribute="top" secondItem="PsL-j2-Mdb" secondAttribute="bottom" constant="30" id="reZ-rV-Wu6"/>
                             <constraint firstItem="npi-VU-wIE" firstAttribute="top" secondItem="4zQ-xx-ZFW" secondAttribute="bottom" constant="30" id="tgp-eK-pkh"/>
+                            <constraint firstItem="U8W-VZ-82F" firstAttribute="centerY" secondItem="j60-dm-l47" secondAttribute="centerY" id="yqh-ze-9o5"/>
                         </constraints>
                     </view>
                 </viewController>

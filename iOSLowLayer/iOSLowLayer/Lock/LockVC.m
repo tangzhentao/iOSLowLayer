@@ -14,6 +14,9 @@
 #import "CheckLockTypeDemo.h"
 #import "ConditionMutexLockDemo.h"
 #import "HLWLivedThread.h"
+#import "NSLockDemo.h"
+#import "NSRecursiveLockDemo.h"
+#import "NSConditionDemo.h"
 
 @interface LockVC ()
 
@@ -23,6 +26,8 @@
 @property (strong, nonatomic) HLWLivedThread *addThread;
 @property (strong, nonatomic) HLWLivedThread *removeThreadA;
 @property (strong, nonatomic) HLWLivedThread *removeThreadB;
+
+@property (strong, nonatomic) NSConditionDemo *conditionLockDemo;
 
 @end
 
@@ -100,6 +105,7 @@
     
 }
 
+#pragma mark - condition mutext lock
 - (IBAction)add:(id)sender
 {
     if (!_conditionMutexLockDemo)
@@ -160,6 +166,91 @@
     
 }
 
+#pragma mark - NSLock
+- (IBAction)testNSLockTicke:(id)sender
+{
+    [[[NSLockDemo alloc] init] testSaleTickets];
+}
+
+- (IBAction)testNSLockMoney:(id)sender
+{
+    [[[NSLockDemo alloc] init] testSaveDrawMoney];
+}
+
+
+#pragma mark - NSRecursiveLock
+- (IBAction)testMainTaskSubtask:(id)sender
+{
+    [[[NSRecursiveLockDemo alloc] init] mainTask];
+}
+
+- (IBAction)testRecursiveTask:(id)sender
+{
+    [[[NSRecursiveLockDemo alloc] init] recursiveTask];
+}
+
+#pragma mark - NSCondition
+- (IBAction)add1:(id)sender
+{
+    if (!_conditionLockDemo)
+    {
+        _conditionLockDemo = [[NSConditionDemo alloc] init];
+    }
+    
+    if (!_addThread)
+    {
+        _addThread = [[HLWLivedThread alloc] init];
+        _addThread.name = @"adder";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_addThread asynPerformBlock:^{
+        [weakSelf.conditionLockDemo addData];
+    }];
+    
+}
+
+- (IBAction)removeA1:(id)sender
+{
+    if (!_conditionLockDemo)
+    {
+        _conditionLockDemo = [[NSConditionDemo alloc] init];
+    }
+    
+    if (!_removeThreadA)
+    {
+        _removeThreadA = [[HLWLivedThread alloc] init];
+        _removeThreadA.name = @"remover A";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_removeThreadA asynPerformBlock:^{
+        [weakSelf.conditionLockDemo removeData];
+    }];
+    
+}
+
+- (IBAction)removeB1:(id)sender
+{
+    if (!_conditionLockDemo)
+    {
+        _conditionLockDemo = [[NSConditionDemo alloc] init];
+    }
+    
+    if (!_removeThreadB)
+    {
+        _removeThreadB = [[HLWLivedThread alloc] init];
+        _removeThreadB.name = @"remover B";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_removeThreadB asynPerformBlock:^{
+        [weakSelf.conditionLockDemo removeData];
+    }];
+    
+}
+
+#pragma mark - other
 - (IBAction)testLockTicke:(id)sender
 {
     [[[UnfairLockDemo alloc] init] testSaveDrawMoney];

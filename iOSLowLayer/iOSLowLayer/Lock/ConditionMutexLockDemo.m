@@ -59,7 +59,8 @@
 {
     // 加锁
     pthread_mutex_lock(&_mutexLock);
-    
+    NSLog(@"%@ > 加锁", [NSThread currentThread].name);
+
     // 添加数据
     [_dataArray addObject:@"test data"];
     NSLog(@"%@ > 添加了一条数据", [NSThread currentThread].name);
@@ -71,9 +72,14 @@
     // 广播信号：疏通所有等待条件_condition的线程
 //    pthread_cond_broadcast(&_condition);
 //    NSLog(@"%@ > 广播了信号", [NSThread currentThread].name);
+    
+    sleep(3);
 
     // 解锁
     pthread_mutex_unlock(&_mutexLock);
+    
+    NSLog(@"%@ > 解锁", [NSThread currentThread].name);
+
 }
 
 /*!
@@ -93,8 +99,12 @@
 
         if (0 == _dataArray.count)
         {
-            // 解锁并睡眠，收到条件发来的信号时唤醒并加锁
             NSLog(@"%@ > 睡觉", [NSThread currentThread].name);
+            
+            /*
+             解锁并睡眠，收到条件发来的信号时唤醒并加锁，
+             如果锁还被被发信号的线程解开，那就继续睡眠等待锁被解开。拿到被解开的锁后，立刻上锁；
+             */
             pthread_cond_wait(&_condition, &_mutexLock);
             NSLog(@"%@ > 醒了", [NSThread currentThread].name);
         }

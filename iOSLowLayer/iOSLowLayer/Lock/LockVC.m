@@ -18,6 +18,7 @@
 #import "NSRecursiveLockDemo.h"
 #import "NSConditionDemo.h"
 #import "NSConditionLockDemo.h"
+#import "SynSerialQueueDemo.h"
 
 @interface LockVC ()
 
@@ -30,6 +31,8 @@
 
 @property (strong, nonatomic) NSConditionDemo *conditionDemo;
 @property (strong, nonatomic) NSConditionLockDemo *conditionLockDemo;
+
+@property (strong, nonatomic) SynSerialQueueDemo *synSerialQueueDemo;
 
 @end
 
@@ -312,14 +315,20 @@
     
 }
 #pragma mark - other
-- (IBAction)testLockTicke:(id)sender
+- (IBAction)testSerialQueueTicke:(id)sender
 {
-    [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
+    if (!_synSerialQueueDemo) {
+        _synSerialQueueDemo = [SynSerialQueueDemo new];
+    }
+    [_synSerialQueueDemo testSaleTickets];
 }
 
-- (IBAction)testLockMoney:(id)sender
+- (IBAction)testSerialQueueMoney:(id)sender
 {
-    [[[UnfairLockDemo alloc] init] testSaveDrawMoney];
+    if (!_synSerialQueueDemo) {
+    _synSerialQueueDemo = [SynSerialQueueDemo new];
+}
+    [_synSerialQueueDemo testSaveDrawMoney];
 }
 
 

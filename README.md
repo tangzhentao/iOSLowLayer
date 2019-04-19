@@ -1,5 +1,5 @@
 # iOSLowLayer
-这是一个学习runloop、GCD和锁的demo集合。
+这是一个使用runloop、GCD和锁的demo集合。
 ## runloop
 #### 运行和停止runloop
 #### 有生命的线程

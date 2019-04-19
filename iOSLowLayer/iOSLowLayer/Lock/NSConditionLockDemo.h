@@ -1,5 +1,5 @@
 //
-//  NSConditionDemo.h
+//  NSConditionLockDemo.h
 //  iOSLowLayer
 //
 //  Created by tang on 2019/4/19.
@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*!
- NSCondition是对pthread_mutex_t和pthread_cond_t的封装
- */
-@interface NSConditionDemo : NSObject
+@interface NSConditionLockDemo : NSObject
 
 - (void)addData;
 

@@ -17,6 +17,7 @@
 #import "NSLockDemo.h"
 #import "NSRecursiveLockDemo.h"
 #import "NSConditionDemo.h"
+#import "NSConditionLockDemo.h"
 
 @interface LockVC ()
 
@@ -27,7 +28,8 @@
 @property (strong, nonatomic) HLWLivedThread *removeThreadA;
 @property (strong, nonatomic) HLWLivedThread *removeThreadB;
 
-@property (strong, nonatomic) NSConditionDemo *conditionLockDemo;
+@property (strong, nonatomic) NSConditionDemo *conditionDemo;
+@property (strong, nonatomic) NSConditionLockDemo *conditionLockDemo;
 
 @end
 
@@ -192,9 +194,69 @@
 #pragma mark - NSCondition
 - (IBAction)add1:(id)sender
 {
+    if (!_conditionDemo)
+    {
+        _conditionDemo = [[NSConditionDemo alloc] init];
+    }
+    
+    if (!_addThread)
+    {
+        _addThread = [[HLWLivedThread alloc] init];
+        _addThread.name = @"adder";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_addThread asynPerformBlock:^{
+        [weakSelf.conditionDemo addData];
+    }];
+}
+
+- (IBAction)removeA1:(id)sender
+{
+    if (!_conditionDemo)
+    {
+        _conditionDemo = [[NSConditionDemo alloc] init];
+    }
+    
+    if (!_removeThreadA)
+    {
+        _removeThreadA = [[HLWLivedThread alloc] init];
+        _removeThreadA.name = @"remover A";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_removeThreadA asynPerformBlock:^{
+        [weakSelf.conditionDemo removeData];
+    }];
+    
+}
+
+- (IBAction)removeB1:(id)sender
+{
+    if (!_conditionDemo)
+    {
+        _conditionDemo = [[NSConditionDemo alloc] init];
+    }
+    
+    if (!_removeThreadB)
+    {
+        _removeThreadB = [[HLWLivedThread alloc] init];
+        _removeThreadB.name = @"remover B";
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    [_removeThreadB asynPerformBlock:^{
+        [weakSelf.conditionDemo removeData];
+    }];
+    
+}
+
+#pragma mark - NSConditionLock
+- (IBAction)add2:(id)sender
+{
     if (!_conditionLockDemo)
     {
-        _conditionLockDemo = [[NSConditionDemo alloc] init];
+        _conditionLockDemo = [[NSConditionLockDemo alloc] init];
     }
     
     if (!_addThread)
@@ -210,11 +272,11 @@
     
 }
 
-- (IBAction)removeA1:(id)sender
+- (IBAction)remove2A:(id)sender
 {
     if (!_conditionLockDemo)
     {
-        _conditionLockDemo = [[NSConditionDemo alloc] init];
+        _conditionLockDemo = [[NSConditionLockDemo alloc] init];
     }
     
     if (!_removeThreadA)
@@ -230,11 +292,11 @@
     
 }
 
-- (IBAction)removeB1:(id)sender
+- (IBAction)remove2B:(id)sender
 {
     if (!_conditionLockDemo)
     {
-        _conditionLockDemo = [[NSConditionDemo alloc] init];
+        _conditionLockDemo = [[NSConditionLockDemo alloc] init];
     }
     
     if (!_removeThreadB)
@@ -249,7 +311,6 @@
     }];
     
 }
-
 #pragma mark - other
 - (IBAction)testLockTicke:(id)sender
 {

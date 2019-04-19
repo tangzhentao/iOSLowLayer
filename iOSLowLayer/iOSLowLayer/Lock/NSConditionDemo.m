@@ -11,7 +11,7 @@
 @interface NSConditionDemo ()
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
-@property (strong, nonatomic) NSCondition *conditionLock; // 条件锁
+@property (strong, nonatomic) NSCondition *condition; // 条件
 
 
 @end
@@ -24,7 +24,7 @@
     if (self)
     {
         // 初始化互斥锁属性
-        _conditionLock = [[NSCondition alloc] init];;
+        _condition = [[NSCondition alloc] init];;
         
         _dataArray = [NSMutableArray array];
         
@@ -43,7 +43,7 @@
 - (void)addData
 {
     // 加锁
-    [_conditionLock lock];
+    [_condition lock];
     NSLog(@"%@ > 加锁", [NSThread currentThread].name);
     
     // 添加数据
@@ -57,11 +57,11 @@
 //    NSLog(@"%@ > 单发了信号", [NSThread currentThread].name);
     
     // 广播信号：疏通所有等待条件_condition的线程
-        [_conditionLock broadcast];
+        [_condition broadcast];
         NSLog(@"%@ > 广播了信号", [NSThread currentThread].name);
     
     // 解锁
-    [_conditionLock unlock];
+    [_condition unlock];
 
     NSLog(@"%@ > 解锁", [NSThread currentThread].name);
     
@@ -73,13 +73,13 @@
 - (void)removeData
 {
     // 加锁
-    [_conditionLock lock];
+    [_condition lock];
 
     if (0 == _dataArray.count)
     {
         // 解锁并睡眠，收到条件发来的信号时唤醒并加锁
         NSLog(@"%@ > 睡觉", [NSThread currentThread].name);
-        [_conditionLock wait];
+        [_condition wait];
         NSLog(@"%@ > 醒了", [NSThread currentThread].name);
     }
     // 添加数据
@@ -87,7 +87,7 @@
     NSLog(@"%@ > 删除一条数据", [NSThread currentThread].name);
     
     // 解锁
-    [_conditionLock unlock];
+    [_condition unlock];
 
 }
 

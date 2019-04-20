@@ -18,6 +18,7 @@
 		24238CC52269A58100FC415F /* NSConditionLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CC42269A58100FC415F /* NSConditionLockDemo.m */; };
 		24238CC82269C06300FC415F /* SynSerialQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CC72269C06300FC415F /* SynSerialQueueDemo.m */; };
 		245241E9226AB83000C246F9 /* SemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 245241E8226AB83000C246F9 /* SemaphoreDemo.m */; };
+		245241EC226ACC8400C246F9 /* SynchronizedDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 245241EB226ACC8400C246F9 /* SynchronizedDemo.m */; };
 		2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469442B2261FDA0003B36BA /* MutexDemo.m */; };
 		24ACE892226459FE000B9054 /* CheckLockTypeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
@@ -58,6 +59,8 @@
 		24238CC72269C06300FC415F /* SynSerialQueueDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynSerialQueueDemo.m; sourceTree = "<group>"; };
 		245241E7226AB83000C246F9 /* SemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreDemo.h; sourceTree = "<group>"; };
 		245241E8226AB83000C246F9 /* SemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreDemo.m; sourceTree = "<group>"; };
+		245241EA226ACC8400C246F9 /* SynchronizedDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchronizedDemo.h; sourceTree = "<group>"; };
+		245241EB226ACC8400C246F9 /* SynchronizedDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchronizedDemo.m; sourceTree = "<group>"; };
 		2469442A2261FDA0003B36BA /* MutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo.h; sourceTree = "<group>"; };
 		2469442B2261FDA0003B36BA /* MutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo.m; sourceTree = "<group>"; };
 		24ACE890226459FE000B9054 /* CheckLockTypeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckLockTypeDemo.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				24238CC72269C06300FC415F /* SynSerialQueueDemo.m */,
 				245241E7226AB83000C246F9 /* SemaphoreDemo.h */,
 				245241E8226AB83000C246F9 /* SemaphoreDemo.m */,
+				245241EA226ACC8400C246F9 /* SynchronizedDemo.h */,
+				245241EB226ACC8400C246F9 /* SynchronizedDemo.m */,
 			);
 			path = Lock;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				24ACE892226459FE000B9054 /* CheckLockTypeDemo.m in Sources */,
 				24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */,
 				2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */,
+				245241EC226ACC8400C246F9 /* SynchronizedDemo.m in Sources */,
 				245241E9226AB83000C246F9 /* SemaphoreDemo.m in Sources */,
 				240693F82260623100D6F7E9 /* LockVC.m in Sources */,
 				24238CC222696BE300FC415F /* NSConditionDemo.m in Sources */,

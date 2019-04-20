@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zQ-xx-ZFW">
-                                <rect key="frame" x="10" y="74" width="147" height="35"/>
+                                <rect key="frame" x="10" y="46" width="147" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  spin lock ticket  "/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsL-j2-Mdb">
-                                <rect key="frame" x="246" y="74" width="158" height="35"/>
+                                <rect key="frame" x="246" y="46" width="158" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  spin lock money  "/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npi-VU-wIE">
-                                <rect key="frame" x="10" y="139" width="160" height="35"/>
+                                <rect key="frame" x="10" y="101" width="160" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  unfair lock ticket  "/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-lX-jMb">
-                                <rect key="frame" x="233" y="139" width="171" height="35"/>
+                                <rect key="frame" x="233" y="101" width="171" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  unfair lock money  "/>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijb-0a-tKj">
-                                <rect key="frame" x="10" y="204" width="164" height="35"/>
+                                <rect key="frame" x="10" y="166" width="164" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  mutex lock ticket  "/>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-lf-hrf">
-                                <rect key="frame" x="229" y="204" width="175" height="35"/>
+                                <rect key="frame" x="229" y="166" width="175" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  mutex lock money  "/>
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAE-xE-f5h">
-                                <rect key="frame" x="10" y="269" width="158" height="35"/>
+                                <rect key="frame" x="10" y="231" width="158" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  mutex lock main  "/>
@@ -85,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lko-za-p6z">
-                                <rect key="frame" x="214" y="269" width="190" height="35"/>
+                                <rect key="frame" x="214" y="231" width="190" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title=" mutex lock recursive  "/>
@@ -94,7 +94,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OE9-Av-w9t">
-                                <rect key="frame" x="338" y="334" width="66" height="35"/>
+                                <rect key="frame" x="338" y="286" width="66" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  again  "/>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-nX-9id">
-                                <rect key="frame" x="10" y="659" width="166" height="35"/>
+                                <rect key="frame" x="10" y="601" width="166" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title=" condition lock add "/>
@@ -112,7 +112,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGb-Lw-4Kp">
-                                <rect key="frame" x="304" y="659" width="100" height="35"/>
+                                <rect key="frame" x="304" y="601" width="100" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="remove B    "/>
@@ -121,7 +121,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-XG-1KY">
-                                <rect key="frame" x="10" y="399" width="72" height="35"/>
+                                <rect key="frame" x="10" y="341" width="72" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="    add    "/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tln-fM-CwL">
-                                <rect key="frame" x="284" y="399" width="120" height="35"/>
+                                <rect key="frame" x="284" y="341" width="120" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="    remove B    "/>
@@ -139,7 +139,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKl-nA-ofI">
-                                <rect key="frame" x="10" y="464" width="138" height="35"/>
+                                <rect key="frame" x="10" y="406" width="138" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  NSLock ticket  "/>
@@ -148,7 +148,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2t-fv-lWA">
-                                <rect key="frame" x="251" y="464" width="153" height="35"/>
+                                <rect key="frame" x="251" y="406" width="153" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="   NSLock money  "/>
@@ -157,7 +157,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smW-OW-bCJ">
-                                <rect key="frame" x="10" y="529" width="138" height="35"/>
+                                <rect key="frame" x="10" y="471" width="138" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  main sub task  "/>
@@ -166,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpf-tT-srj">
-                                <rect key="frame" x="246" y="529" width="158" height="35"/>
+                                <rect key="frame" x="246" y="471" width="158" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="    recursive task    "/>
@@ -175,7 +175,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbO-gG-aeY">
-                                <rect key="frame" x="10" y="594" width="131" height="35"/>
+                                <rect key="frame" x="10" y="536" width="131" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title=" condition add  "/>
@@ -184,7 +184,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8W-VZ-82F">
-                                <rect key="frame" x="304" y="594" width="100" height="35"/>
+                                <rect key="frame" x="304" y="536" width="100" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  remove B  "/>
@@ -193,7 +193,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l99-H4-zRa">
-                                <rect key="frame" x="10" y="334" width="154" height="35"/>
+                                <rect key="frame" x="10" y="286" width="154" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  check lock type  "/>
@@ -202,7 +202,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-to-Zfg">
-                                <rect key="frame" x="144" y="399" width="115" height="35"/>
+                                <rect key="frame" x="144" y="341" width="115" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="    remove A   "/>
@@ -211,7 +211,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j60-dm-l47">
-                                <rect key="frame" x="197" y="594" width="91" height="35"/>
+                                <rect key="frame" x="197" y="536" width="91" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title=" remove A "/>
@@ -220,7 +220,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-1v-MFi">
-                                <rect key="frame" x="199" y="659" width="95" height="35"/>
+                                <rect key="frame" x="199" y="601" width="95" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="remove A   "/>
@@ -229,7 +229,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyF-51-5os">
-                                <rect key="frame" x="10" y="724" width="175" height="35"/>
+                                <rect key="frame" x="10" y="666" width="175" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  serial queue ticket  "/>
@@ -238,7 +238,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NY-Ma-rfx">
-                                <rect key="frame" x="219" y="724" width="185" height="35"/>
+                                <rect key="frame" x="219" y="666" width="185" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  serial queue money  "/>
@@ -246,8 +246,17 @@
                                     <action selector="testSerialQueueMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="QZ4-Y7-7J8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="est-Ya-wmh">
+                                <rect key="frame" x="10" y="731" width="120" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="   semaphore  "/>
+                                <connections>
+                                    <action selector="testSemaphore:" destination="iHy-x1-fZf" eventType="touchUpInside" id="RbG-J0-MX3"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpM-ks-FAb">
-                                <rect key="frame" x="315" y="789" width="89" height="35"/>
+                                <rect key="frame" x="315" y="731" width="89" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  account  "/>
@@ -256,21 +265,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a48-bN-Oqc">
-                                <rect key="frame" x="199" y="789" width="106" height="35"/>
+                                <rect key="frame" x="199" y="731" width="106" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="  sale ticket  "/>
                                 <connections>
-                                    <action selector="testSemaphoreMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="gDV-T6-8qU"/>
+                                    <action selector="testSemaphoreTicket:" destination="iHy-x1-fZf" eventType="touchUpInside" id="hp5-Wy-Dnr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="est-Ya-wmh">
-                                <rect key="frame" x="10" y="789" width="120" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb4-ef-l70">
+                                <rect key="frame" x="10" y="786" width="139" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="   semaphore  "/>
+                                <state key="normal" title="   synchronzied  "/>
                                 <connections>
-                                    <action selector="testSemaphore:" destination="iHy-x1-fZf" eventType="touchUpInside" id="RbG-J0-MX3"/>
+                                    <action selector="testSynchronzied:" destination="iHy-x1-fZf" eventType="touchUpInside" id="bze-gu-fsD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMV-tZ-aaR">
+                                <rect key="frame" x="315" y="786" width="89" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="  account  "/>
+                                <connections>
+                                    <action selector="testSynchronziedAccount:" destination="iHy-x1-fZf" eventType="touchUpInside" id="7de-CV-J3H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5t-cK-ngO">
+                                <rect key="frame" x="199" y="786" width="106" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="  sale ticket  "/>
+                                <connections>
+                                    <action selector="testSynchronziedTicket:" destination="iHy-x1-fZf" eventType="touchUpInside" id="E3t-yc-lfj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -285,24 +312,28 @@
                             <constraint firstItem="oHa-nX-9id" firstAttribute="top" secondItem="mbO-gG-aeY" secondAttribute="bottom" constant="30" id="2hD-NO-sMg"/>
                             <constraint firstItem="LKl-nA-ofI" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="2iI-Jw-yNL"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="top" secondItem="U8W-VZ-82F" secondAttribute="bottom" constant="30" id="3NC-pY-B4P"/>
-                            <constraint firstItem="OE9-Av-w9t" firstAttribute="top" secondItem="lko-za-p6z" secondAttribute="bottom" constant="30" id="3WI-1e-TZk"/>
+                            <constraint firstItem="OE9-Av-w9t" firstAttribute="top" secondItem="lko-za-p6z" secondAttribute="bottom" constant="20" id="3WI-1e-TZk"/>
                             <constraint firstItem="Tln-fM-CwL" firstAttribute="centerY" secondItem="kOx-to-Zfg" secondAttribute="centerY" id="5Kp-Hb-xB9"/>
                             <constraint firstItem="9ab-lf-hrf" firstAttribute="top" secondItem="gxe-lX-jMb" secondAttribute="bottom" constant="30" id="6o0-3X-cuP"/>
                             <constraint firstItem="smW-OW-bCJ" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="7x3-gY-8z3"/>
                             <constraint firstItem="lko-za-p6z" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="9fR-8z-ghi"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="top" secondItem="hpf-tT-srj" secondAttribute="bottom" constant="30" id="ARQ-Rf-l4D"/>
+                            <constraint firstItem="Kb4-ef-l70" firstAttribute="leading" secondItem="est-Ya-wmh" secondAttribute="leading" id="Bda-AA-fle"/>
                             <constraint firstItem="est-Ya-wmh" firstAttribute="leading" secondItem="RyF-51-5os" secondAttribute="leading" id="DJx-wu-avY"/>
                             <constraint firstItem="AAE-xE-f5h" firstAttribute="top" secondItem="Ijb-0a-tKj" secondAttribute="bottom" constant="30" id="EcH-EM-IXg"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="Er6-Mt-lzq"/>
+                            <constraint firstItem="sMV-tZ-aaR" firstAttribute="leading" secondItem="z5t-cK-ngO" secondAttribute="trailing" constant="10" id="Etf-z6-mmZ"/>
+                            <constraint firstItem="Kb4-ef-l70" firstAttribute="top" secondItem="est-Ya-wmh" secondAttribute="bottom" constant="20" id="F62-PL-aVE"/>
                             <constraint firstItem="gxe-lX-jMb" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="FSM-2W-99y"/>
                             <constraint firstItem="mbO-gG-aeY" firstAttribute="top" secondItem="smW-OW-bCJ" secondAttribute="bottom" constant="30" id="GhZ-YM-uie"/>
-                            <constraint firstItem="C4s-XG-1KY" firstAttribute="top" secondItem="l99-H4-zRa" secondAttribute="bottom" constant="30" id="HYd-c1-TcW"/>
+                            <constraint firstItem="C4s-XG-1KY" firstAttribute="top" secondItem="l99-H4-zRa" secondAttribute="bottom" constant="20" id="HYd-c1-TcW"/>
+                            <constraint firstItem="sMV-tZ-aaR" firstAttribute="centerY" secondItem="z5t-cK-ngO" secondAttribute="centerY" id="HrR-Yl-K1h"/>
                             <constraint firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" constant="10" id="HuX-0B-OQg"/>
                             <constraint firstItem="FpM-ks-FAb" firstAttribute="centerY" secondItem="a48-bN-Oqc" secondAttribute="centerY" id="Kfv-JO-OEa"/>
                             <constraint firstItem="FpM-ks-FAb" firstAttribute="leading" secondItem="a48-bN-Oqc" secondAttribute="trailing" constant="10" id="Lq4-fG-tYT"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="centerY" secondItem="Yh7-1v-MFi" secondAttribute="centerY" id="OEU-ZX-dQA"/>
                             <constraint firstItem="hpf-tT-srj" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="OYO-u5-hLS"/>
-                            <constraint firstItem="l99-H4-zRa" firstAttribute="top" secondItem="AAE-xE-f5h" secondAttribute="bottom" constant="30" id="P1b-78-1TE"/>
+                            <constraint firstItem="l99-H4-zRa" firstAttribute="top" secondItem="AAE-xE-f5h" secondAttribute="bottom" constant="20" id="P1b-78-1TE"/>
                             <constraint firstItem="smW-OW-bCJ" firstAttribute="top" secondItem="LKl-nA-ofI" secondAttribute="bottom" constant="30" id="Qb6-KK-v2j"/>
                             <constraint firstItem="PsL-j2-Mdb" firstAttribute="centerY" secondItem="4zQ-xx-ZFW" secondAttribute="centerY" id="RDT-Q2-aXF"/>
                             <constraint firstItem="E2t-fv-lWA" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="RZa-Sv-A6O"/>
@@ -311,10 +342,12 @@
                             <constraint firstItem="npi-VU-wIE" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="Wgz-CB-Sjr"/>
                             <constraint firstItem="FpM-ks-FAb" firstAttribute="trailing" secondItem="9NY-Ma-rfx" secondAttribute="trailing" id="Wir-EV-TS7"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="leading" secondItem="j60-dm-l47" secondAttribute="trailing" constant="16" id="Zkb-bL-IGy"/>
-                            <constraint firstItem="Tln-fM-CwL" firstAttribute="top" secondItem="OE9-Av-w9t" secondAttribute="bottom" constant="30" id="a4Q-jF-5Td"/>
+                            <constraint firstItem="Tln-fM-CwL" firstAttribute="top" secondItem="OE9-Av-w9t" secondAttribute="bottom" constant="20" id="a4Q-jF-5Td"/>
                             <constraint firstItem="lko-za-p6z" firstAttribute="top" secondItem="9ab-lf-hrf" secondAttribute="bottom" constant="30" id="arh-wm-Mkm"/>
                             <constraint firstItem="oHa-nX-9id" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="bBx-Ed-034"/>
+                            <constraint firstItem="sMV-tZ-aaR" firstAttribute="leading" secondItem="z5t-cK-ngO" secondAttribute="trailing" constant="10" id="dJ8-w9-Lqu"/>
                             <constraint firstItem="a48-bN-Oqc" firstAttribute="centerY" secondItem="est-Ya-wmh" secondAttribute="centerY" id="fWZ-0v-djt"/>
+                            <constraint firstItem="sMV-tZ-aaR" firstAttribute="trailing" secondItem="FpM-ks-FAb" secondAttribute="trailing" id="fkz-yV-1sl"/>
                             <constraint firstItem="9ab-lf-hrf" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="g3I-5W-pOQ"/>
                             <constraint firstItem="FpM-ks-FAb" firstAttribute="centerY" secondItem="est-Ya-wmh" secondAttribute="centerY" id="gBN-FS-Frg"/>
                             <constraint firstItem="Tln-fM-CwL" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="gkd-Pm-8Pk"/>
@@ -322,17 +355,19 @@
                             <constraint firstItem="l99-H4-zRa" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="hPZ-ZX-mZL"/>
                             <constraint firstItem="hpf-tT-srj" firstAttribute="top" secondItem="E2t-fv-lWA" secondAttribute="bottom" constant="30" id="j48-Hq-xTo"/>
                             <constraint firstItem="9NY-Ma-rfx" firstAttribute="centerY" secondItem="RyF-51-5os" secondAttribute="centerY" id="lfF-NO-1qo"/>
-                            <constraint firstItem="4zQ-xx-ZFW" firstAttribute="top" secondItem="SMs-iK-mFn" secondAttribute="bottom" constant="30" id="mN3-hl-535"/>
+                            <constraint firstItem="4zQ-xx-ZFW" firstAttribute="top" secondItem="SMs-iK-mFn" secondAttribute="bottom" constant="2" id="mN3-hl-535"/>
                             <constraint firstItem="Ijb-0a-tKj" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="mzg-VY-BLd"/>
                             <constraint firstItem="mbO-gG-aeY" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="nof-Px-1gH"/>
                             <constraint firstItem="RyF-51-5os" firstAttribute="top" secondItem="oHa-nX-9id" secondAttribute="bottom" constant="30" id="oKE-Xc-SXT"/>
                             <constraint firstItem="4zQ-xx-ZFW" firstAttribute="leading" secondItem="iU6-aA-Jeb" secondAttribute="leading" constant="10" id="qls-9R-KS1"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="rci-aW-oAG"/>
-                            <constraint firstItem="gxe-lX-jMb" firstAttribute="top" secondItem="PsL-j2-Mdb" secondAttribute="bottom" constant="30" id="reZ-rV-Wu6"/>
+                            <constraint firstItem="gxe-lX-jMb" firstAttribute="top" secondItem="PsL-j2-Mdb" secondAttribute="bottom" constant="20" id="reZ-rV-Wu6"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="leading" secondItem="Yh7-1v-MFi" secondAttribute="trailing" constant="10" id="sfp-Pu-PxG"/>
-                            <constraint firstItem="npi-VU-wIE" firstAttribute="top" secondItem="4zQ-xx-ZFW" secondAttribute="bottom" constant="30" id="tgp-eK-pkh"/>
+                            <constraint firstItem="npi-VU-wIE" firstAttribute="top" secondItem="4zQ-xx-ZFW" secondAttribute="bottom" constant="20" id="tgp-eK-pkh"/>
                             <constraint firstItem="est-Ya-wmh" firstAttribute="top" secondItem="RyF-51-5os" secondAttribute="bottom" constant="30" id="uMd-IX-ome"/>
                             <constraint firstItem="RyF-51-5os" firstAttribute="leading" secondItem="oHa-nX-9id" secondAttribute="leading" id="uOI-sy-lFc"/>
+                            <constraint firstItem="sMV-tZ-aaR" firstAttribute="centerY" secondItem="Kb4-ef-l70" secondAttribute="centerY" id="wEB-Nv-LTh"/>
+                            <constraint firstItem="z5t-cK-ngO" firstAttribute="centerY" secondItem="Kb4-ef-l70" secondAttribute="centerY" id="wQN-R1-PBk"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="centerY" secondItem="j60-dm-l47" secondAttribute="centerY" id="yqh-ze-9o5"/>
                         </constraints>
                     </view>

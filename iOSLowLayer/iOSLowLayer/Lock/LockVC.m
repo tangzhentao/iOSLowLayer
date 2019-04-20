@@ -20,6 +20,7 @@
 #import "NSConditionLockDemo.h"
 #import "SynSerialQueueDemo.h"
 #import "SemaphoreDemo.h"
+#import "SynchronizedDemo.h"
 
 @interface LockVC ()
 
@@ -339,7 +340,7 @@
     [[SemaphoreDemo new] testSemaphore];
 }
 
-- (IBAction)testSemaphoreMoney:(id)sender
+- (IBAction)testSemaphoreTicket:(id)sender
 {
     [[SemaphoreDemo new] testSaleTickets];
 }
@@ -347,6 +348,22 @@
 - (IBAction)testSemaphoreAccount:(id)sender
 {
     [[SemaphoreDemo new] testSaveDrawMoney];
+}
+
+#pragma mark - @synchronzied
+- (IBAction)testSynchronzied:(id)sender
+{
+    [[SynchronizedDemo new] testSynchronized];
+}
+
+- (IBAction)testSynchronziedTicket:(id)sender
+{
+    [[SynchronizedDemo new] testSaleTickets];
+}
+
+- (IBAction)testSynchronziedAccount:(id)sender
+{
+    [[SynchronizedDemo new] testSaveDrawMoney];
 }
 
 

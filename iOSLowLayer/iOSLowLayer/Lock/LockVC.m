@@ -19,6 +19,7 @@
 #import "NSConditionDemo.h"
 #import "NSConditionLockDemo.h"
 #import "SynSerialQueueDemo.h"
+#import "SemaphoreDemo.h"
 
 @interface LockVC ()
 
@@ -314,7 +315,8 @@
     }];
     
 }
-#pragma mark - other
+
+#pragma mark - serial queue
 - (IBAction)testSerialQueueTicke:(id)sender
 {
     if (!_synSerialQueueDemo) {
@@ -327,8 +329,24 @@
 {
     if (!_synSerialQueueDemo) {
     _synSerialQueueDemo = [SynSerialQueueDemo new];
-}
+    }
     [_synSerialQueueDemo testSaveDrawMoney];
+}
+
+#pragma mark - semaphore
+- (IBAction)testSemaphore:(id)sender
+{
+    [[SemaphoreDemo new] testSemaphore];
+}
+
+- (IBAction)testSemaphoreMoney:(id)sender
+{
+    [[SemaphoreDemo new] testSaleTickets];
+}
+
+- (IBAction)testSemaphoreAccount:(id)sender
+{
+    [[SemaphoreDemo new] testSaveDrawMoney];
 }
 
 

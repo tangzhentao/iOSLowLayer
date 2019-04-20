@@ -103,19 +103,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-nX-9id">
-                                <rect key="frame" x="10" y="659" width="83" height="35"/>
+                                <rect key="frame" x="10" y="659" width="166" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    add2    "/>
+                                <state key="normal" title=" condition lock add "/>
                                 <connections>
                                     <action selector="add2:" destination="iHy-x1-fZf" eventType="touchUpInside" id="c8N-cM-Epy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGb-Lw-4Kp">
-                                <rect key="frame" x="273" y="659" width="131" height="35"/>
+                                <rect key="frame" x="304" y="659" width="100" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    remove2 B    "/>
+                                <state key="normal" title="remove B    "/>
                                 <connections>
                                     <action selector="remove2B:" destination="iHy-x1-fZf" eventType="touchUpInside" id="qbg-aQ-wWF"/>
                                 </connections>
@@ -175,19 +175,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbO-gG-aeY">
-                                <rect key="frame" x="10" y="594" width="80" height="35"/>
+                                <rect key="frame" x="10" y="594" width="131" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    add1    "/>
+                                <state key="normal" title=" condition add  "/>
                                 <connections>
                                     <action selector="add1:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Zv1-2q-5C4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8W-VZ-82F">
-                                <rect key="frame" x="276" y="594" width="128" height="35"/>
+                                <rect key="frame" x="304" y="594" width="100" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    remove1 B    "/>
+                                <state key="normal" title="  remove B  "/>
                                 <connections>
                                     <action selector="removeB1:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Pta-TO-Gp0"/>
                                 </connections>
@@ -211,19 +211,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j60-dm-l47">
-                                <rect key="frame" x="137" y="594" width="123" height="35"/>
+                                <rect key="frame" x="197" y="594" width="91" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    remove1 A   "/>
+                                <state key="normal" title=" remove A "/>
                                 <connections>
                                     <action selector="removeA1:" destination="iHy-x1-fZf" eventType="touchUpInside" id="c3d-E1-3ex"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh7-1v-MFi">
-                                <rect key="frame" x="137" y="659" width="126" height="35"/>
+                                <rect key="frame" x="199" y="659" width="95" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    remove2 A   "/>
+                                <state key="normal" title="remove A   "/>
                                 <connections>
                                     <action selector="remove2A:" destination="iHy-x1-fZf" eventType="touchUpInside" id="leu-NA-qJg"/>
                                 </connections>
@@ -246,6 +246,33 @@
                                     <action selector="testSerialQueueMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="QZ4-Y7-7J8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpM-ks-FAb">
+                                <rect key="frame" x="315" y="789" width="89" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="  account  "/>
+                                <connections>
+                                    <action selector="testSemaphoreAccount:" destination="iHy-x1-fZf" eventType="touchUpInside" id="jvO-gA-uiE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a48-bN-Oqc">
+                                <rect key="frame" x="199" y="789" width="106" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="  sale ticket  "/>
+                                <connections>
+                                    <action selector="testSemaphoreMoney:" destination="iHy-x1-fZf" eventType="touchUpInside" id="gDV-T6-8qU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="est-Ya-wmh">
+                                <rect key="frame" x="10" y="789" width="120" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="   semaphore  "/>
+                                <connections>
+                                    <action selector="testSemaphore:" destination="iHy-x1-fZf" eventType="touchUpInside" id="RbG-J0-MX3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -264,12 +291,15 @@
                             <constraint firstItem="smW-OW-bCJ" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="7x3-gY-8z3"/>
                             <constraint firstItem="lko-za-p6z" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="9fR-8z-ghi"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="top" secondItem="hpf-tT-srj" secondAttribute="bottom" constant="30" id="ARQ-Rf-l4D"/>
+                            <constraint firstItem="est-Ya-wmh" firstAttribute="leading" secondItem="RyF-51-5os" secondAttribute="leading" id="DJx-wu-avY"/>
                             <constraint firstItem="AAE-xE-f5h" firstAttribute="top" secondItem="Ijb-0a-tKj" secondAttribute="bottom" constant="30" id="EcH-EM-IXg"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="Er6-Mt-lzq"/>
                             <constraint firstItem="gxe-lX-jMb" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="FSM-2W-99y"/>
                             <constraint firstItem="mbO-gG-aeY" firstAttribute="top" secondItem="smW-OW-bCJ" secondAttribute="bottom" constant="30" id="GhZ-YM-uie"/>
                             <constraint firstItem="C4s-XG-1KY" firstAttribute="top" secondItem="l99-H4-zRa" secondAttribute="bottom" constant="30" id="HYd-c1-TcW"/>
                             <constraint firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" constant="10" id="HuX-0B-OQg"/>
+                            <constraint firstItem="FpM-ks-FAb" firstAttribute="centerY" secondItem="a48-bN-Oqc" secondAttribute="centerY" id="Kfv-JO-OEa"/>
+                            <constraint firstItem="FpM-ks-FAb" firstAttribute="leading" secondItem="a48-bN-Oqc" secondAttribute="trailing" constant="10" id="Lq4-fG-tYT"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="centerY" secondItem="Yh7-1v-MFi" secondAttribute="centerY" id="OEU-ZX-dQA"/>
                             <constraint firstItem="hpf-tT-srj" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="OYO-u5-hLS"/>
                             <constraint firstItem="l99-H4-zRa" firstAttribute="top" secondItem="AAE-xE-f5h" secondAttribute="bottom" constant="30" id="P1b-78-1TE"/>
@@ -277,12 +307,16 @@
                             <constraint firstItem="PsL-j2-Mdb" firstAttribute="centerY" secondItem="4zQ-xx-ZFW" secondAttribute="centerY" id="RDT-Q2-aXF"/>
                             <constraint firstItem="E2t-fv-lWA" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="RZa-Sv-A6O"/>
                             <constraint firstItem="LKl-nA-ofI" firstAttribute="top" secondItem="C4s-XG-1KY" secondAttribute="bottom" constant="30" id="Rfr-hx-3F8"/>
+                            <constraint firstItem="FpM-ks-FAb" firstAttribute="leading" secondItem="a48-bN-Oqc" secondAttribute="trailing" constant="10" id="SmZ-gD-lNF"/>
                             <constraint firstItem="npi-VU-wIE" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="Wgz-CB-Sjr"/>
+                            <constraint firstItem="FpM-ks-FAb" firstAttribute="trailing" secondItem="9NY-Ma-rfx" secondAttribute="trailing" id="Wir-EV-TS7"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="leading" secondItem="j60-dm-l47" secondAttribute="trailing" constant="16" id="Zkb-bL-IGy"/>
                             <constraint firstItem="Tln-fM-CwL" firstAttribute="top" secondItem="OE9-Av-w9t" secondAttribute="bottom" constant="30" id="a4Q-jF-5Td"/>
                             <constraint firstItem="lko-za-p6z" firstAttribute="top" secondItem="9ab-lf-hrf" secondAttribute="bottom" constant="30" id="arh-wm-Mkm"/>
                             <constraint firstItem="oHa-nX-9id" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="bBx-Ed-034"/>
+                            <constraint firstItem="a48-bN-Oqc" firstAttribute="centerY" secondItem="est-Ya-wmh" secondAttribute="centerY" id="fWZ-0v-djt"/>
                             <constraint firstItem="9ab-lf-hrf" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="g3I-5W-pOQ"/>
+                            <constraint firstItem="FpM-ks-FAb" firstAttribute="centerY" secondItem="est-Ya-wmh" secondAttribute="centerY" id="gBN-FS-Frg"/>
                             <constraint firstItem="Tln-fM-CwL" firstAttribute="trailing" secondItem="PsL-j2-Mdb" secondAttribute="trailing" id="gkd-Pm-8Pk"/>
                             <constraint firstItem="C4s-XG-1KY" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="gxj-XQ-7GS"/>
                             <constraint firstItem="l99-H4-zRa" firstAttribute="leading" secondItem="4zQ-xx-ZFW" secondAttribute="leading" id="hPZ-ZX-mZL"/>
@@ -297,6 +331,7 @@
                             <constraint firstItem="gxe-lX-jMb" firstAttribute="top" secondItem="PsL-j2-Mdb" secondAttribute="bottom" constant="30" id="reZ-rV-Wu6"/>
                             <constraint firstItem="lGb-Lw-4Kp" firstAttribute="leading" secondItem="Yh7-1v-MFi" secondAttribute="trailing" constant="10" id="sfp-Pu-PxG"/>
                             <constraint firstItem="npi-VU-wIE" firstAttribute="top" secondItem="4zQ-xx-ZFW" secondAttribute="bottom" constant="30" id="tgp-eK-pkh"/>
+                            <constraint firstItem="est-Ya-wmh" firstAttribute="top" secondItem="RyF-51-5os" secondAttribute="bottom" constant="30" id="uMd-IX-ome"/>
                             <constraint firstItem="RyF-51-5os" firstAttribute="leading" secondItem="oHa-nX-9id" secondAttribute="leading" id="uOI-sy-lFc"/>
                             <constraint firstItem="U8W-VZ-82F" firstAttribute="centerY" secondItem="j60-dm-l47" secondAttribute="centerY" id="yqh-ze-9o5"/>
                         </constraints>

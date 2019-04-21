@@ -11,8 +11,8 @@
 
 @interface MutexDemo ()
 
-@property (assign, nonatomic) pthread_mutex_t saleTicketLock; // 自旋锁
-@property (assign, nonatomic) pthread_mutex_t accountLock; // 自旋锁
+@property (assign, nonatomic) pthread_mutex_t saleTicketLock;
+@property (assign, nonatomic) pthread_mutex_t accountLock;
 
 @end
 
@@ -27,6 +27,12 @@
         [self initLock:&_accountLock];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    pthread_mutex_destroy(&_saleTicketLock);
+    pthread_mutex_destroy(&_accountLock);
 }
 
 - (void)initLock:(pthread_mutex_t *)lock

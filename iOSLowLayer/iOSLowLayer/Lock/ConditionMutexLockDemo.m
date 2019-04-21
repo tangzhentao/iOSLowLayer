@@ -13,7 +13,7 @@
 @interface ConditionMutexLockDemo ()
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
-@property (assign, nonatomic) pthread_mutex_t mutexLock; // 自旋锁
+@property (assign, nonatomic) pthread_mutex_t mutexLock;
 @property (assign, nonatomic) pthread_cond_t condition; // 条件
 
 
@@ -49,7 +49,8 @@
 {
     // 释放互斥锁
     pthread_mutex_destroy(&_mutexLock);
-    // 释放互斥锁属性
+    // 释放条件
+    pthread_cond_destroy(&_condition);
 }
 
 /*!

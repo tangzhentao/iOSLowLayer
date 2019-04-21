@@ -10,8 +10,8 @@
 
 @interface NSLockDemo ()
 
-@property (strong, nonatomic) NSLock *saleTicketLock; // 自旋锁
-@property (strong, nonatomic) NSLock *accountLock; // 自旋锁
+@property (strong, nonatomic) NSLock *saleTicketLock;
+@property (strong, nonatomic) NSLock *accountLock;
 
 @end
 

@@ -11,8 +11,8 @@
 
 @interface SpinLockDemo ()
 
-@property (assign, nonatomic) OSSpinLock saleTicketLock; // 自旋锁
-@property (assign, nonatomic) OSSpinLock accountLock; // 自旋锁
+@property (assign, nonatomic) OSSpinLock saleTicketLock;
+@property (assign, nonatomic) OSSpinLock accountLock;
 
 @end
 

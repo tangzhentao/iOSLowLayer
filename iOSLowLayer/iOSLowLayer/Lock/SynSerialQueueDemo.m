@@ -10,8 +10,8 @@
 
 @interface SynSerialQueueDemo ()
 
-@property (strong, nonatomic) dispatch_queue_t saleTicketQueue; // 自旋锁
-@property (strong, nonatomic) dispatch_queue_t accountQueue; // 自旋锁
+@property (strong, nonatomic) dispatch_queue_t saleTicketQueue;
+@property (strong, nonatomic) dispatch_queue_t accountQueue;
 
 @end
 

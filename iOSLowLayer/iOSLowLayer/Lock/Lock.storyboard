@@ -121,19 +121,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-XG-1KY">
-                                <rect key="frame" x="10" y="341" width="72" height="35"/>
+                                <rect key="frame" x="10" y="341" width="148" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    add    "/>
+                                <state key="normal" title=" cond mutex add "/>
                                 <connections>
                                     <action selector="add:" destination="iHy-x1-fZf" eventType="touchUpInside" id="1QF-qi-7hO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tln-fM-CwL">
-                                <rect key="frame" x="284" y="341" width="120" height="35"/>
+                                <rect key="frame" x="314" y="341" width="90" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    remove B    "/>
+                                <state key="normal" title=" remove B "/>
                                 <connections>
                                     <action selector="removeB:" destination="iHy-x1-fZf" eventType="touchUpInside" id="mQj-dV-ww0"/>
                                 </connections>
@@ -157,19 +157,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smW-OW-bCJ">
-                                <rect key="frame" x="10" y="471" width="138" height="35"/>
+                                <rect key="frame" x="10" y="471" width="195" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="  main sub task  "/>
+                                <state key="normal" title="NSRecursiveLock  task"/>
                                 <connections>
                                     <action selector="testMainTaskSubtask:" destination="iHy-x1-fZf" eventType="touchUpInside" id="8oT-zR-Pjp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpf-tT-srj">
-                                <rect key="frame" x="246" y="471" width="158" height="35"/>
+                                <rect key="frame" x="280" y="471" width="124" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    recursive task    "/>
+                                <state key="normal" title="recursive task "/>
                                 <connections>
                                     <action selector="testRecursiveTask:" destination="iHy-x1-fZf" eventType="touchUpInside" id="NFb-iR-DYB"/>
                                 </connections>
@@ -202,10 +202,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-to-Zfg">
-                                <rect key="frame" x="144" y="341" width="115" height="35"/>
+                                <rect key="frame" x="208" y="341" width="81" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="    remove A   "/>
+                                <state key="normal" title="remove A"/>
                                 <connections>
                                     <action selector="removeA:" destination="iHy-x1-fZf" eventType="touchUpInside" id="Sja-7B-TJO"/>
                                 </connections>

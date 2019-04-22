@@ -20,6 +20,8 @@
 		245241E9226AB83000C246F9 /* SemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 245241E8226AB83000C246F9 /* SemaphoreDemo.m */; };
 		245241EC226ACC8400C246F9 /* SynchronizedDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 245241EB226ACC8400C246F9 /* SynchronizedDemo.m */; };
 		2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469442B2261FDA0003B36BA /* MutexDemo.m */; };
+		24A7B19B226D684500171118 /* ReadWriteLockVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A7B19A226D684500171118 /* ReadWriteLockVC.storyboard */; };
+		24A7B19E226D726700171118 /* ReadWriteLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A7B19D226D726700171118 /* ReadWriteLockVC.m */; };
 		24ACE892226459FE000B9054 /* CheckLockTypeDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */; };
 		24AD787122486E6D00520B8E /* HLWLivedThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD787022486E6D00520B8E /* HLWLivedThread.m */; };
 		24AD7874224888C900520B8E /* LearnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24AD7873224888C900520B8E /* LearnItem.m */; };
@@ -63,6 +65,9 @@
 		245241EB226ACC8400C246F9 /* SynchronizedDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchronizedDemo.m; sourceTree = "<group>"; };
 		2469442A2261FDA0003B36BA /* MutexDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutexDemo.h; sourceTree = "<group>"; };
 		2469442B2261FDA0003B36BA /* MutexDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo.m; sourceTree = "<group>"; };
+		24A7B19A226D684500171118 /* ReadWriteLockVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReadWriteLockVC.storyboard; sourceTree = "<group>"; };
+		24A7B19C226D726700171118 /* ReadWriteLockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadWriteLockVC.h; sourceTree = "<group>"; };
+		24A7B19D226D726700171118 /* ReadWriteLockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadWriteLockVC.m; sourceTree = "<group>"; };
 		24ACE890226459FE000B9054 /* CheckLockTypeDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckLockTypeDemo.h; sourceTree = "<group>"; };
 		24ACE891226459FE000B9054 /* CheckLockTypeDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckLockTypeDemo.m; sourceTree = "<group>"; };
 		24AD786F22486E6D00520B8E /* HLWLivedThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLWLivedThread.h; sourceTree = "<group>"; };
@@ -141,6 +146,16 @@
 			path = Lock;
 			sourceTree = "<group>";
 		};
+		24A7B197226D67E300171118 /* ReadWriteLock */ = {
+			isa = PBXGroup;
+			children = (
+				24A7B19A226D684500171118 /* ReadWriteLockVC.storyboard */,
+				24A7B19C226D726700171118 /* ReadWriteLockVC.h */,
+				24A7B19D226D726700171118 /* ReadWriteLockVC.m */,
+			);
+			path = ReadWriteLock;
+			sourceTree = "<group>";
+		};
 		24AD78752248AFB100520B8E /* LivedThread */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +198,7 @@
 				24EA2FDF2243AA03004EE50F /* RunStopRunLoopVC.h */,
 				24EA2FE02243AA03004EE50F /* RunStopRunLoopVC.m */,
 				240693F3226061D700D6F7E9 /* Lock */,
+				24A7B197226D67E300171118 /* ReadWriteLock */,
 				24AD78752248AFB100520B8E /* LivedThread */,
 				24EA2FE22243AA03004EE50F /* Main.storyboard */,
 				24EA2FE52243AA06004EE50F /* Assets.xcassets */,
@@ -253,6 +269,7 @@
 				24AD787C2248B03C00520B8E /* TestLivedThreadVC.storyboard in Resources */,
 				24EA2FE92243AA06004EE50F /* LaunchScreen.storyboard in Resources */,
 				24EA2FE62243AA06004EE50F /* Assets.xcassets in Resources */,
+				24A7B19B226D684500171118 /* ReadWriteLockVC.storyboard in Resources */,
 				24EA2FE42243AA03004EE50F /* Main.storyboard in Resources */,
 				240693F52260621500D6F7E9 /* Lock.storyboard in Resources */,
 			);
@@ -278,6 +295,7 @@
 				24238CC222696BE300FC415F /* NSConditionDemo.m in Sources */,
 				24238CBF226964C300FC415F /* NSRecursiveLockDemo.m in Sources */,
 				240025872262E3B1003FF26C /* RecursiveMutexLockDemo.m in Sources */,
+				24A7B19E226D726700171118 /* ReadWriteLockVC.m in Sources */,
 				24238CC52269A58100FC415F /* NSConditionLockDemo.m in Sources */,
 				24AD78792248B01100520B8E /* TestLivedThreadVC.m in Sources */,
 				24EA2FDE2243AA03004EE50F /* AppDelegate.m in Sources */,

@@ -19,7 +19,9 @@ typedef NS_ENUM(int, LearnItemType)
     LearnItemTypePerformDelayUsingTimerOnRunLoop, // 延迟执行是通过在runloop中添加定时器实现的
     LearnItemTypeWaitExitedThread, // 等待退出的线程
     LearnItemTypeGCDGroup, // group
-    LearnItemTypeLock, // 
+    LearnItemTypeLock, //
+    LearnItemTypeReadWriteLock, //
+
 
 };
 

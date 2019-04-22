@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9JK-oz-hcF">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Read Write LockVC-->
+        <scene sceneID="aCx-Lr-MiE">
+            <objects>
+                <viewController id="9JK-oz-hcF" customClass="ReadWriteLockVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wYr-Eu-hw7"/>
+                        <viewControllerLayoutGuide type="bottom" id="bZf-X1-neg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FdW-Zg-paI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCI-mS-VXM">
+                                <rect key="frame" x="117.5" y="144" width="179" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="    pthread_rwlock_t   ">
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="crossPlatformRWLock:" destination="9JK-oz-hcF" eventType="touchUpInside" id="x8D-62-qN9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGs-rq-ntT">
+                                <rect key="frame" x="117.5" y="280" width="179" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="    pthread_rwlock_t   ">
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="barrier:" destination="9JK-oz-hcF" eventType="touchUpInside" id="6zt-0O-cjw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qGs-rq-ntT" firstAttribute="top" secondItem="aCI-mS-VXM" secondAttribute="bottom" constant="100" id="B4C-Hj-OsL"/>
+                            <constraint firstItem="aCI-mS-VXM" firstAttribute="centerX" secondItem="FdW-Zg-paI" secondAttribute="centerX" id="KJj-6G-ED2"/>
+                            <constraint firstItem="qGs-rq-ntT" firstAttribute="centerX" secondItem="FdW-Zg-paI" secondAttribute="centerX" id="UI8-zb-ezg"/>
+                            <constraint firstItem="aCI-mS-VXM" firstAttribute="top" secondItem="wYr-Eu-hw7" secondAttribute="bottom" constant="100" id="tWb-Bh-TkN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Siu-eq-le2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="163"/>
+        </scene>
+    </scenes>
+</document>

@@ -21,6 +21,8 @@ typedef NS_ENUM(int, LearnItemType)
     LearnItemTypeGCDGroup, // group
     LearnItemTypeLock, //
     LearnItemTypeReadWriteLock, //
+    LearnItemTypeMemoryManager, //
+
 
 
 };

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uc2-Ud-67E">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memory Manager DemoVC-->
+        <scene sceneID="K5q-2m-RZi">
+            <objects>
+                <viewController id="uc2-Ud-67E" customClass="MemoryManagerDemoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m5H-Yd-7nG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZaF-af-3S9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nYh-1k-WSS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbZ-Yg-dM6">
+                                <rect key="frame" x="117.5" y="144" width="179" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="    pthread_rwlock_t   ">
+                                    <color key="titleColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTq-6n-rmV">
+                                <rect key="frame" x="117.5" y="280" width="179" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="    pthread_rwlock_t   ">
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyU-Qx-GY8">
+                                <rect key="frame" x="10" y="376" width="166" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="NSObject subclass"/>
+                                <connections>
+                                    <action selector="testNSObjectSubclass:" destination="uc2-Ud-67E" eventType="touchUpInside" id="PwV-Qm-OMX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7d-i7-9OM">
+                                <rect key="frame" x="247" y="376" width="157" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="NSProxy subclass"/>
+                                <connections>
+                                    <action selector="testNSProxySubclass:" destination="uc2-Ud-67E" eventType="touchUpInside" id="OX6-1b-Fek"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TTq-6n-rmV" firstAttribute="top" secondItem="hbZ-Yg-dM6" secondAttribute="bottom" constant="100" id="3dG-kx-Aqr"/>
+                            <constraint firstItem="r7d-i7-9OM" firstAttribute="trailing" secondItem="nYh-1k-WSS" secondAttribute="trailingMargin" constant="10" id="DsC-Sg-qig"/>
+                            <constraint firstItem="eyU-Qx-GY8" firstAttribute="top" secondItem="TTq-6n-rmV" secondAttribute="bottom" constant="60" id="Sxi-1V-yrz"/>
+                            <constraint firstItem="eyU-Qx-GY8" firstAttribute="top" secondItem="TTq-6n-rmV" secondAttribute="bottom" constant="60" id="U6U-OI-Rgf"/>
+                            <constraint firstItem="hbZ-Yg-dM6" firstAttribute="top" secondItem="m5H-Yd-7nG" secondAttribute="bottom" constant="100" id="Wa1-xF-Njz"/>
+                            <constraint firstItem="hbZ-Yg-dM6" firstAttribute="centerX" secondItem="nYh-1k-WSS" secondAttribute="centerX" id="ZJT-H1-5ay"/>
+                            <constraint firstItem="r7d-i7-9OM" firstAttribute="centerY" secondItem="eyU-Qx-GY8" secondAttribute="centerY" id="hF6-Mw-nkg"/>
+                            <constraint firstItem="TTq-6n-rmV" firstAttribute="centerX" secondItem="nYh-1k-WSS" secondAttribute="centerX" id="k0z-pA-mbx"/>
+                            <constraint firstItem="eyU-Qx-GY8" firstAttribute="leading" secondItem="nYh-1k-WSS" secondAttribute="leading" constant="10" id="rTy-Ol-9lS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ay-po-z5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="163"/>
+        </scene>
+    </scenes>
+</document>

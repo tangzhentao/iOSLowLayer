@@ -36,6 +36,7 @@
                                       [LearnItem learnItemWithType:LearnItemTypeGCDGroup title:@"GCD Group"],
                                       [LearnItem learnItemWithType:LearnItemTypeLock title:@"Lock"],
                                       [LearnItem learnItemWithType:LearnItemTypeReadWriteLock title:@"ReadWriteLock"],
+                                      [LearnItem learnItemWithType:LearnItemTypeMemoryManager title:@"MemoryManager"],
 
                                       ]];
     
@@ -337,8 +338,18 @@
              */
             UIViewController *vc = [[UIStoryboard storyboardWithName:@"ReadWriteLockVC" bundle:nil] instantiateInitialViewController];
             [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
             
-            
+        case LearnItemTypeMemoryManager:
+        {
+            /*
+             只会调用task1，因为
+             执行task2时，线程已经释放。等待task2在一个释放的线程中执行完成会闪退；
+             如果，不等待task2执行完成，不会闪退，但也不会打印；
+             */
+            UIViewController *vc = [[UIStoryboard storyboardWithName:@"MemoryManagerDemoVC" bundle:nil] instantiateInitialViewController];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             

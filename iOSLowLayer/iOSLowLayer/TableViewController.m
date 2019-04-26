@@ -37,7 +37,8 @@
                                       [LearnItem learnItemWithType:LearnItemTypeLock title:@"Lock"],
                                       [LearnItem learnItemWithType:LearnItemTypeReadWriteLock title:@"ReadWriteLock"],
                                       [LearnItem learnItemWithType:LearnItemTypeMemoryManager title:@"MemoryManager"],
-
+                                      [LearnItem learnItemWithType:LearnItemTypeMemoryAddressMap title:@"MemoryAddressMap"],
+                                      
                                       ]];
     
      [self printRunLoopActivity];
@@ -350,6 +351,50 @@
              */
             UIViewController *vc = [[UIStoryboard storyboardWithName:@"MemoryManagerDemoVC" bundle:nil] instantiateInitialViewController];
             [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case LearnItemTypeMemoryAddressMap:
+        {
+            /*
+             地址从低到高依次为：
+             保留段
+             代码段(_TEXT)： 编译之后的代码
+             数据段(_DATA)
+                字符串常量：比如NSString *str = @"hello";
+                已初始化数据：已经初始化的全局变量、静态变量等；
+                未初始化数据：未初始化的全局变量、静态变量等；
+             堆(heap)↓：动态分配的地址，如，alloc、malloc、calloc。分配的内存的地址越来越大；
+             栈(stack)↑：用于函数调用开销，如局部变量，分配的内存的地址越来越小；
+             内核区
+             */
+            
+            // 字符常量相同的两个变量地址也相同
+            int local1 = 1;
+            int local2 = 1;
+            void *dynamicMemory1 = malloc(4);
+            void *dynamicMemory2 = malloc(4);
+
+            static int u1 = 2;
+            static int u2 = 2;
+            static int s1 = 2;
+            static int s2 = 2;
+            NSString *str1 = @"hello";
+            NSString *str2 = @"hello";
+            
+            NSLog(@"local1: %p", &local1);
+            NSLog(@"local2: %p", &local2);
+            
+            NSLog(@"dynamicMemory1: %p", dynamicMemory1);
+            NSLog(@"dynamicMemory2: %p", dynamicMemory2);
+            
+            NSLog(@"u1: %p", &u1);
+            NSLog(@"u2: %p", &u2);
+            NSLog(@"s1: %p", &s1);
+            NSLog(@"s2: %p", &s2);
+            NSLog(@"str1: %p, str2: %p", str1, str2);
+
+
         }
             break;
             

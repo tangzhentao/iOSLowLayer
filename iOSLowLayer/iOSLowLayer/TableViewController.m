@@ -11,6 +11,8 @@
 #import "RunStopRunLoopVC.h"
 #import "LearnItem.h"
 #import "ReadWriteLockVC.h"
+#import "MRCViewController.h"
+
 
 @interface TableViewController ()
 
@@ -38,6 +40,8 @@
                                       [LearnItem learnItemWithType:LearnItemTypeReadWriteLock title:@"ReadWriteLock"],
                                       [LearnItem learnItemWithType:LearnItemTypeMemoryManager title:@"MemoryManager"],
                                       [LearnItem learnItemWithType:LearnItemTypeMemoryAddressMap title:@"MemoryAddressMap"],
+                                      [LearnItem learnItemWithType:LearnItemTypeMRC title:@"MRC"],
+
                                       
                                       ]];
     
@@ -395,6 +399,16 @@
             NSLog(@"str1: %p, str2: %p", str1, str2);
 
 
+        }
+            break;
+            
+        case LearnItemTypeMRC:
+        {
+            // 通过自定义类名 + xib文件名 获取xib文件代表的视图控制器
+//            UIViewController *vc = [[MRCViewController alloc] initWithNibName:@"MRCViewController" bundle:nil];
+            // 通过自定义类名获取xib文件代表的视图控制器，该方法会加在与类同名的xib文件
+            UIViewController *vc = [[MRCViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }
             break;
             

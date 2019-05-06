@@ -23,6 +23,7 @@ typedef NS_ENUM(int, LearnItemType)
     LearnItemTypeReadWriteLock, //
     LearnItemTypeMemoryManager, //
     LearnItemTypeMemoryAddressMap, // 内存地址分布
+    LearnItemTypeMRC, // 手动内存管理
 
 };
 

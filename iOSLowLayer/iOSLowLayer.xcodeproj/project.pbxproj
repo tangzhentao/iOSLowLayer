@@ -19,6 +19,8 @@
 		24238CC222696BE300FC415F /* NSConditionDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CC122696BE300FC415F /* NSConditionDemo.m */; };
 		24238CC52269A58100FC415F /* NSConditionLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CC42269A58100FC415F /* NSConditionLockDemo.m */; };
 		24238CC82269C06300FC415F /* SynSerialQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24238CC72269C06300FC415F /* SynSerialQueueDemo.m */; };
+		2440B14722793FA100C57A09 /* MRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440B14522793FA100C57A09 /* MRCViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2440B14822793FA100C57A09 /* MRCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2440B14622793FA100C57A09 /* MRCViewController.xib */; };
 		245241E9226AB83000C246F9 /* SemaphoreDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 245241E8226AB83000C246F9 /* SemaphoreDemo.m */; };
 		245241EC226ACC8400C246F9 /* SynchronizedDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 245241EB226ACC8400C246F9 /* SynchronizedDemo.m */; };
 		2469442C2261FDA0003B36BA /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2469442B2261FDA0003B36BA /* MutexDemo.m */; };
@@ -67,6 +69,9 @@
 		24238CC42269A58100FC415F /* NSConditionLockDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSConditionLockDemo.m; sourceTree = "<group>"; };
 		24238CC62269C06300FC415F /* SynSerialQueueDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynSerialQueueDemo.h; sourceTree = "<group>"; };
 		24238CC72269C06300FC415F /* SynSerialQueueDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynSerialQueueDemo.m; sourceTree = "<group>"; };
+		2440B14422793FA100C57A09 /* MRCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRCViewController.h; sourceTree = "<group>"; };
+		2440B14522793FA100C57A09 /* MRCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MRCViewController.m; sourceTree = "<group>"; };
+		2440B14622793FA100C57A09 /* MRCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MRCViewController.xib; sourceTree = "<group>"; };
 		245241E7226AB83000C246F9 /* SemaphoreDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreDemo.h; sourceTree = "<group>"; };
 		245241E8226AB83000C246F9 /* SemaphoreDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreDemo.m; sourceTree = "<group>"; };
 		245241EA226ACC8400C246F9 /* SynchronizedDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchronizedDemo.h; sourceTree = "<group>"; };
@@ -157,6 +162,16 @@
 			path = Lock;
 			sourceTree = "<group>";
 		};
+		2440B14322793F4100C57A09 /* MRC */ = {
+			isa = PBXGroup;
+			children = (
+				2440B14422793FA100C57A09 /* MRCViewController.h */,
+				2440B14522793FA100C57A09 /* MRCViewController.m */,
+				2440B14622793FA100C57A09 /* MRCViewController.xib */,
+			);
+			path = MRC;
+			sourceTree = "<group>";
+		};
 		24A7B197226D67E300171118 /* ReadWriteLock */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +185,7 @@
 		24A7B19F226DD41000171118 /* MemoryManage */ = {
 			isa = PBXGroup;
 			children = (
+				2440B14322793F4100C57A09 /* MRC */,
 				24A7B1A0226DD44D00171118 /* MemoryManagerDemoVC.h */,
 				24A7B1A1226DD44D00171118 /* MemoryManagerDemoVC.m */,
 				24006774226EABC30079368B /* HLWTimerTarget.h */,
@@ -299,6 +315,7 @@
 				24EA2FE42243AA03004EE50F /* Main.storyboard in Resources */,
 				240693F52260621500D6F7E9 /* Lock.storyboard in Resources */,
 				24A7B1A4226DDB0700171118 /* MemoryManagerDemoVC.storyboard in Resources */,
+				2440B14822793FA100C57A09 /* MRCViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +349,7 @@
 				24A7B1A2226DD44D00171118 /* MemoryManagerDemoVC.m in Sources */,
 				24AD7874224888C900520B8E /* LearnItem.m in Sources */,
 				2408DC872244746300F8F720 /* TableViewController.m in Sources */,
+				2440B14722793FA100C57A09 /* MRCViewController.m in Sources */,
 				24DBFA952261F01600810BBD /* UnfairLockDemo.m in Sources */,
 				24238CBC2269569300FC415F /* NSLockDemo.m in Sources */,
 				2400677C226F008A0079368B /* HLWTargetProxy.m in Sources */,

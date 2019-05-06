@@ -14,7 +14,7 @@
 #import "MRCViewController.h"
 
 
-@interface TableViewController ()
+@interface TableViewController () <NSObject>
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
 
@@ -379,8 +379,8 @@
             void *dynamicMemory1 = malloc(4);
             void *dynamicMemory2 = malloc(4);
 
-            static int u1 = 2;
-            static int u2 = 2;
+            static int u1;
+            static int u2;
             static int s1 = 2;
             static int s2 = 2;
             NSString *str1 = @"hello";
@@ -389,6 +389,12 @@
             NSLog(@"local1: %p", &local1);
             NSLog(@"local2: %p", &local2);
             
+            NSObject *o1 = [[NSObject alloc] init];
+            NSObject *o2 = [[NSObject alloc] init];
+            NSLog(@"o1: %p", o1);
+            NSLog(@"o2: %p", o2);
+            NSLog(@"_dataArray: %p", _dataArray);
+
             NSLog(@"dynamicMemory1: %p", dynamicMemory1);
             NSLog(@"dynamicMemory2: %p", dynamicMemory2);
             

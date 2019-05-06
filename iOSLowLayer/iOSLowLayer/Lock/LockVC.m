@@ -40,6 +40,14 @@
 
 @implementation LockVC
 
++ (void)initialize
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // code to be executed once
+    });
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

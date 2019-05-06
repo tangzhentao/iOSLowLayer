@@ -61,7 +61,6 @@
      self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:_timerTarget selector:@selector(print) userInfo:nil repeats:YES];
      */
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:_targetProxy selector:@selector(print) userInfo:nil repeats:YES];
-    
 }
 
 - (void)print

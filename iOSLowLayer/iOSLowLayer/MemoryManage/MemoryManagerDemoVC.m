@@ -12,14 +12,7 @@
 
 
 
-@interface Foo: NSObject
 
-@property (copy, nonatomic) NSMutableArray *dataArray;
-
-@end
-
-@implementation Foo
-@end
 
 @interface MemoryManagerDemoVC ()
 
@@ -118,22 +111,16 @@ extern void _objc_autoreleasePoolPrint(void);
 #pragma mark - copy 可变数据
 - (IBAction)copyMutableObject:(id)sender
 {
-    // 浅拷贝
-    NSMutableArray *data = [NSMutableArray array];
-    [data addObject:@"1"];
-    
-    Foo *foo = [Foo new];
-    foo.dataArray = data;
-    
-    /*
-     运行到这里会崩溃。
-     因为Foo的dataArray属性是用copy修饰的，所以Foo对象copy到的是个不可变数组NSAarry
-     所以向一个不可变数组中添加对象会崩溃
-     */
-    [foo.dataArray addObject:@"2"];
     
 }
 
+#pragma mark - copy 可变数据
+- (IBAction)taggedObjectReferenceCount:(id)sender
+{
+    NSNumber *number1 = @1;
+    NSNumber *number2 = @1;
+
+}
 
 - (void)print
 {

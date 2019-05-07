@@ -8,9 +8,18 @@
 
 #import "MRCViewController.h"
 
+@interface Foo: NSObject
+
+@property (copy, nonatomic) NSMutableArray *dataArray;
+
+@end
+
+@implementation Foo
+@end
+
+
+
 @interface MRCViewController ()
-
-
 
 @end
 
@@ -29,8 +38,6 @@
     if (_lastName != lastName) {
         [_lastName release];
         _lastName = [lastName copy];
-        
-        NSMutableString
     }
 }
 
@@ -42,31 +49,73 @@
     }
 }
 
-//@synthesize name;
-- (IBAction)biubiu:(id)sender
-{
-    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    [self setName:@"job"];
-    
-    NSLog(@"name: %@", self.name);
-    
-    self.retainCount
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)taggedObjectReferenceCount:(id)sender
+{
+    /*
+     这种小数值的number本来应该使用Tagged Pointer技术来存储的
+     不知道为啥不是Tagged Pointer对象了；
+     */
+    NSNumber *number1 = @1;
+    NSNumber *number2 = @2;
+    NSNumber *number3 = @3;
+    NSNumber *number4 = @0xffffffff;
+    
+    NSLog(@"number1: %p", number1);
+    NSLog(@"number2: %p", number2);
+    NSLog(@"number3: %p", number3);
+    NSLog(@"number4: %p", number4);
+    
+    /*
+     Tagged Pointer 对象的引用计数是long的最大值，因为它其实不是一个oc 对象；
+     字符常量的引用计数是long的最大值，因为它一直在内存中存在直到程序结束，所以不需要用引用计数来管理内存；
+     */
+    NSString *str1 = @"hello";
+    NSString *str2 = [NSString stringWithFormat:@"%@", str1]; // Tagged Pointer 对象
+    NSMutableString *str3 = [str1 mutableCopy];
+    
+    NSLog(@"str1<%p:%@>, retain count: %lu, %@", str1, [str1 class], str1.retainCount, str1);
+    NSLog(@"str2<%p:%@>, retain count: %lu, %@", str2, [str2 class], str2.retainCount, str2);
+    NSLog(@"str3<%p:%@>, retain count: %lu, %@", str3, [str3 class], str3.retainCount, str3);
 }
-*/
+
+// 浅拷贝、深拷贝
+- (IBAction)shallowCopDeepCopy:(id)sender
+{
+    // 浅拷贝
+    NSMutableString *mutableName = [NSMutableString stringWithString:@"James"];
+    NSArray *names = @[mutableName];
+    NSArray *namesCopy = [names copy];
+    
+    NSLog(@"names: %p, name: %p", names, names.firstObject);
+    NSLog(@"namesCopy: %p, name: %p", namesCopy, namesCopy.firstObject);
+    
+    // 浅拷贝
+    NSMutableArray *mutableNames = [names mutableCopy];
+    NSLog(@"mutableNames: %p, name: %p", mutableNames, mutableNames.firstObject);
+}
+
+#pragma mark - copy 可变数据
+- (IBAction)copyMutableObject:(id)sender
+{
+    // 浅拷贝
+    NSMutableArray *data = [NSMutableArray array];
+    [data addObject:@"1"];
+    
+    Foo *foo = [Foo new];
+    foo.dataArray = data;
+    
+    /*
+     运行到这里会崩溃。
+     因为Foo的dataArray属性是用copy修饰的，所以Foo对象copy到的是个不可变数组NSAarry
+     所以向一个不可变数组中添加对象会崩溃
+     */
+    [foo.dataArray addObject:@"2"];
+    
+}
 
 @end

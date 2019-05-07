@@ -19,16 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7w-HR-zlE">
-                    <rect key="frame" x="118" y="171" width="49" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="asfsfas"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7w-HR-zlE">
+                    <rect key="frame" x="84.5" y="74" width="245" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="    Tagged Object引用计数    "/>
                     <connections>
-                        <action selector="biubiu:" destination="-1" eventType="touchUpInside" id="QhN-ic-6eP"/>
+                        <action selector="taggedObjectReferenceCount:" destination="-1" eventType="touchUpInside" id="Cn4-hC-7m4"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="V7w-HR-zlE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="30" id="Mkk-WI-na6"/>
+                <constraint firstItem="V7w-HR-zlE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xwF-Kn-2Wx"/>
+            </constraints>
         </view>
     </objects>
 </document>

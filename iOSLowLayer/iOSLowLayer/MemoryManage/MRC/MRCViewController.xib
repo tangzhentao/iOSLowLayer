@@ -29,10 +29,34 @@
                         <action selector="taggedObjectReferenceCount:" destination="-1" eventType="touchUpInside" id="Cn4-hC-7m4"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxZ-L4-mwG">
+                    <rect key="frame" x="117.5" y="160" width="179" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="    浅拷贝、深拷贝    "/>
+                    <connections>
+                        <action selector="shallowCopDeepCopy:" destination="-1" eventType="touchUpInside" id="rC6-Y2-dnF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-fV-LGS">
+                    <rect key="frame" x="76" y="246" width="262" height="36"/>
+                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="    对可变对象调用copy方法    "/>
+                    <connections>
+                        <action selector="copyMutableObject:" destination="-1" eventType="touchUpInside" id="GTX-Wn-XlX"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="XxZ-L4-mwG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Eh-t2-6FX"/>
+                <constraint firstItem="XxZ-L4-mwG" firstAttribute="top" secondItem="V7w-HR-zlE" secondAttribute="bottom" constant="50" id="KRP-0g-pAz"/>
                 <constraint firstItem="V7w-HR-zlE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="30" id="Mkk-WI-na6"/>
+                <constraint firstItem="YNM-fV-LGS" firstAttribute="top" secondItem="XxZ-L4-mwG" secondAttribute="bottom" constant="50" id="SvP-5u-cfH"/>
+                <constraint firstItem="YNM-fV-LGS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TGD-33-Tub"/>
                 <constraint firstItem="V7w-HR-zlE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xwF-Kn-2Wx"/>
             </constraints>
         </view>

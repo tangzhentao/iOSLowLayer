@@ -8,7 +8,7 @@
 
 #import "MRCViewController.h"
 
-@interface Foo: NSObject
+@interface Foo: NSObject<NSCopying, NSMutableCopying>
 
 @property (copy, nonatomic) NSMutableArray *dataArray;
 
@@ -74,13 +74,19 @@
      Tagged Pointer 对象的引用计数是long的最大值，因为它其实不是一个oc 对象；
      字符常量的引用计数是long的最大值，因为它一直在内存中存在直到程序结束，所以不需要用引用计数来管理内存；
      */
-    NSString *str1 = @"hello";
-    NSString *str2 = [NSString stringWithFormat:@"%@", str1]; // Tagged Pointer 对象
-    NSMutableString *str3 = [str1 mutableCopy];
+    NSString *str1 = @"hello"; // __NSCFConstantString, retainCount = long的最大值
+    NSString *str2 = [NSString stringWithFormat:@"%@", str1]; // NSTaggedPointerString, retainCount = 1
+    NSMutableString *str3 = [str1 mutableCopy];// __NSCFString, retainCount = 1
+    NSString *str4 = [NSString stringWithFormat:@"%@, world, hello china, hello, everybody, hello everything. hello, hello, ...", str1]; // __NSCFString, retainCount = 2
+    NSString *str5 = [str4 copy];// __NSCFString, retainCount = 2
+
     
     NSLog(@"str1<%p:%@>, retain count: %lu, %@", str1, [str1 class], str1.retainCount, str1);
     NSLog(@"str2<%p:%@>, retain count: %lu, %@", str2, [str2 class], str2.retainCount, str2);
     NSLog(@"str3<%p:%@>, retain count: %lu, %@", str3, [str3 class], str3.retainCount, str3);
+    NSLog(@"str4<%p:%@>, retain count: %lu, %@", str4, [str4 class], str4.retainCount, str4);
+    NSLog(@"str5<%p:%@>, retain count: %lu, %@", str5, [str5 class], str5.retainCount, str5);
+
 }
 
 // 浅拷贝、深拷贝

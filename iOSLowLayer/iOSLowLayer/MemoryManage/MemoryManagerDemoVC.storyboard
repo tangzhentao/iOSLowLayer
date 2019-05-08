@@ -32,19 +32,8 @@
                                     <action selector="time:" destination="uc2-Ud-67E" eventType="touchUpInside" id="6fW-Ep-g2S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTq-6n-rmV">
-                                <rect key="frame" x="135.5" y="130" width="143" height="36"/>
-                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="深拷贝、浅拷贝">
-                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="shallowCopDeepCopy:" destination="uc2-Ud-67E" eventType="touchUpInside" id="6co-hy-YDP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyU-Qx-GY8">
-                                <rect key="frame" x="10" y="196" width="166" height="36"/>
+                                <rect key="frame" x="10" y="150" width="166" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="NSObject subclass"/>
@@ -53,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7d-i7-9OM">
-                                <rect key="frame" x="247" y="196" width="157" height="36"/>
+                                <rect key="frame" x="247" y="150" width="157" height="36"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="NSProxy subclass"/>
@@ -61,29 +50,14 @@
                                     <action selector="testNSProxySubclass:" destination="uc2-Ud-67E" eventType="touchUpInside" id="OX6-1b-Fek"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7o-2a-dmb">
-                                <rect key="frame" x="127" y="262" width="160" height="36"/>
-                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="    copy可变数组    ">
-                                    <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="copyMutableObject:" destination="uc2-Ud-67E" eventType="touchUpInside" id="BAo-Q1-E4B"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="U7o-2a-dmb" firstAttribute="centerX" secondItem="nYh-1k-WSS" secondAttribute="centerX" id="2Ff-lA-9Tc"/>
-                            <constraint firstItem="TTq-6n-rmV" firstAttribute="top" secondItem="hbZ-Yg-dM6" secondAttribute="bottom" constant="30" id="3dG-kx-Aqr"/>
-                            <constraint firstItem="U7o-2a-dmb" firstAttribute="top" secondItem="eyU-Qx-GY8" secondAttribute="bottom" constant="30" id="98f-pO-oJm"/>
                             <constraint firstItem="r7d-i7-9OM" firstAttribute="trailing" secondItem="nYh-1k-WSS" secondAttribute="trailingMargin" constant="10" id="DsC-Sg-qig"/>
-                            <constraint firstItem="eyU-Qx-GY8" firstAttribute="top" secondItem="TTq-6n-rmV" secondAttribute="bottom" constant="30" id="Sxi-1V-yrz"/>
                             <constraint firstItem="hbZ-Yg-dM6" firstAttribute="top" secondItem="m5H-Yd-7nG" secondAttribute="bottom" constant="20" id="Wa1-xF-Njz"/>
+                            <constraint firstItem="eyU-Qx-GY8" firstAttribute="top" secondItem="hbZ-Yg-dM6" secondAttribute="bottom" constant="50" id="WkX-aN-W6M"/>
                             <constraint firstItem="hbZ-Yg-dM6" firstAttribute="centerX" secondItem="nYh-1k-WSS" secondAttribute="centerX" id="ZJT-H1-5ay"/>
                             <constraint firstItem="r7d-i7-9OM" firstAttribute="centerY" secondItem="eyU-Qx-GY8" secondAttribute="centerY" id="hF6-Mw-nkg"/>
-                            <constraint firstItem="TTq-6n-rmV" firstAttribute="centerX" secondItem="nYh-1k-WSS" secondAttribute="centerX" id="k0z-pA-mbx"/>
                             <constraint firstItem="eyU-Qx-GY8" firstAttribute="leading" secondItem="nYh-1k-WSS" secondAttribute="leading" constant="10" id="rTy-Ol-9lS"/>
                         </constraints>
                     </view>

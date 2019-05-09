@@ -46,6 +46,38 @@
                                       ]];
     
      [self printRunLoopActivity];
+    
+    [self setRightItems];
+}
+
+- (void)setRightItems
+{
+    
+    UISwitch *rightSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+
+    rightSwitch.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    rightSwitch.transform = CGAffineTransformTranslate(rightSwitch.transform, 0, 10);
+
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+
+    [view addSubview:rightSwitch];
+
+    
+    UILabel *tiplabel = [[UILabel alloc] init];
+    tiplabel.text = @"隐身中";
+    tiplabel.textAlignment = NSTextAlignmentLeft;
+    UIBarButtonItem *sw = [[UIBarButtonItem alloc] initWithCustomView:view];
+    
+    UIBarButtonItem *tip = [[UIBarButtonItem alloc] initWithCustomView:tiplabel];
+    
+    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    spaceItem.width = 10;
+    self.navigationItem.rightBarButtonItems = @[tip, sw];
+}
+
+- (void)switchAction:(id)sender
+{
+    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

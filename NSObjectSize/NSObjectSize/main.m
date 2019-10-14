@@ -10,6 +10,19 @@
 #import <objc/runtime.h> // class_getInstanceSize
 #import <malloc/malloc.h> // malloc_size
 
+@interface Student : NSObject
+{
+    @public
+    int number;
+    int age;
+}
+
+@end
+
+@implementation Student
+
+@end
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -21,8 +34,6 @@ int main(int argc, const char * argv[]) {
         NSObject *object = [[NSObject alloc] init];
         size_t mallocSize = malloc_size((__bridge const void *)object);
         NSLog(@"mallocSize = %zu", mallocSize);
-
-        
     }
     return 0;
 }

@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		241B34632354C3820097306B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		24A069FF2351A29800D0CFCE /* NSObjectSize */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSObjectSize; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A06A022351A29900D0CFCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +58,7 @@
 		24A06A012351A29800D0CFCE /* NSObjectSize */ = {
 			isa = PBXGroup;
 			children = (
+				241B34632354C3820097306B /* main.cpp */,
 				24A06A022351A29900D0CFCE /* main.m */,
 			);
 			path = NSObjectSize;

@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
-/* NSObject的分类 */
-
 #pragma mark - NSObject(superclass)
 @interface NSObject (superclass)
 
@@ -74,23 +72,19 @@ long long get_real_isa_address (id object) {
     Class isa = struct_ptr->isa;
     long long isa_value = (long long)isa;
     long long real_address = isa_value & MY_ISA_MASK;
-    
+
     return real_address;
 }
 
 /*
- 获取对象的isaz指针指向的真是地址
+ 获取类对象或元类对象的superclass
  
- 之前isa指向的地址就是真实的地址，某个系统之后
- isa指向的不再是真是的地址，需要按位与上一个掩码之后获取真实地址
+ superclass所指向的地址就是真实地址；
  */
-long long get_real_superclass_address (id class) {
+Class get_superclass (id class) {
     struct Class_IMPL *struct_ptr = (__bridge struct Class_IMPL *)class;
     Class superclass = struct_ptr->superclass;
-    long long superclass_value = (long long)superclass;
-    long long real_address = superclass_value & MY_ISA_MASK;
-    
-    return real_address;
+    return superclass;
 }
 
 /*
@@ -110,7 +104,7 @@ void check_isa () {
     NSLog(@"root_meta_class_object: %p", root_meta_class_object);
 
     long long instance_isa = get_real_isa_address(instance);
-    NSLog(@"instance_isa: 0x%llX", instance_isa);
+    NSLog(@"instance_isa: 0x%llx", instance_isa);
     
     long long class_object_isa = get_real_isa_address(class_object);
     NSLog(@"class_object_isa: 0x%llx", class_object_isa);
@@ -132,33 +126,29 @@ void check_superclass () {
     Class child_class_object = [Person class];
     
     NSLog(@"father_class_object: %p", father_class_object);
-    long long child_class_superclass = get_real_superclass_address(child_class_object);
-    NSLog(@"child_class_superclass: 0x%llx", child_class_superclass);
+    Class child_class_superclass = get_superclass(child_class_object);
+    NSLog(@"child_class_superclass: %p", child_class_superclass);
     
-    long long root_class_superclass = get_real_superclass_address(father_class_object);
-    NSLog(@"root_class_superclass: 0x%llx", root_class_superclass);
+    Class root_class_superclass = get_superclass(father_class_object);
+    NSLog(@"root_class_superclass: %p", root_class_superclass);
     
     // meta-class对象的superclass
     Class father_meta_class_objcet = object_getClass(father_class_object);
     Class child_meta_class_objcet = object_getClass(child_class_object);
     NSLog(@"father_meta_class_objcet: %p", father_meta_class_objcet);
     
-    long long child_meta_class_superclass = get_real_superclass_address(child_meta_class_objcet);
-    NSLog(@"child_meta_class_superclass: 0x%llx", child_meta_class_superclass);
+    Class child_meta_class_superclass = get_superclass(child_meta_class_objcet);
+    NSLog(@"child_meta_class_superclass: %p", child_meta_class_superclass);
     
-    NSLog(@"root__class_object: %p", father_class_object);
-    long long root_meta_class_superclass = get_real_superclass_address(father_meta_class_objcet);
-    NSLog(@"root_meta_class_superclass: 0x%llx", root_meta_class_superclass);
+    NSLog(@"root_class_object: %p", father_class_object);
+    Class root_meta_class_superclass = get_superclass(father_meta_class_objcet);
+    NSLog(@"root_meta_class_superclass: %p", root_meta_class_superclass);
 }
 
 // 验证根类的meta-class对象的superclass指向根类class对象
 void check_root_meta_class_superclass_pointer_to_root_class () {
     [Person instanceMethod];
 }
-
-//
-
-
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

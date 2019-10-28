@@ -3,14 +3,14 @@
 //  KVO
 //
 //  Created by itang on 2019/10/20.
-//  Copyright © 2019 itang. All rights reserved.
+//  Copyright Â© 2019 itang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *windos;
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 

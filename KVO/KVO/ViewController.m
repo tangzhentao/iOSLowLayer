@@ -41,6 +41,57 @@ long long get_real_isa_address (id object) {
     return real_address;
 }
 
+void printMethodsOfClass(Class cls)
+{
+    // 获取方法列表
+    unsigned int count;
+    Method *methodList = class_copyMethodList(cls, &count);
+    
+    for (int i = 0; i < count; i++) {
+        Method method = methodList[i];
+        // 获取方法名
+        NSString *methodName = NSStringFromSelector(method_getName(method));
+        NSLog(@"%@", methodName);
+    }
+    
+    // C函数中以名字中有copy、create、new的函数返回的内存需要手动释放
+    free(methodList);
+}
+
+void printInstanceVarNamesOfClass(Class cls)
+{
+    // 获取成员变量列表
+    unsigned int count;
+    Ivar *ivarList = class_copyIvarList(cls, &count);
+    
+    for (int i = 0; i < count; i++) {
+        Ivar ivar = ivarList[i];
+        // 获取成员变量名
+        const char *ivarName = ivar_getName(ivar);
+        NSLog(@"%s", ivarName);
+    }
+    
+    // C函数中以名字中有copy、create、new的函数返回的内存需要手动释放
+    free(ivarList);
+}
+
+void printPropertyNamesOfClass(Class cls)
+{
+    // 获取成员变量列表
+    unsigned int count;
+    objc_property_t *propertyList = class_copyPropertyList(cls, &count);
+    
+    for (int i = 0; i < count; i++) {
+        objc_property_t property = propertyList[i];
+        // 获取成员变量名
+        const char *propertyName = property_getName(property);
+        NSLog(@"%s", propertyName);
+    }
+    
+    // C函数中以名字中有copy、create、new的函数返回的内存需要手动释放
+    free(propertyList);
+}
+
 #pragma mark - Person
 @interface Person : NSObject
 
@@ -49,8 +100,19 @@ long long get_real_isa_address (id object) {
 @end
 
 @implementation Person
-@end
 
+- (void)setAge:(int)age
+{
+    _age = age;
+//    NSArray *calls = [NSThread callStackSymbols];
+//    NSLog(@"calls: %@", calls);
+    
+//    observationInfo
+    
+    // _changeValueForKeys:count:maybeOldValuesDict:maybeNewValuesDict:usingBlock:
+}
+
+@end
 
 #pragma mark - ViewController
 @interface ViewController ()
@@ -75,68 +137,23 @@ long long get_real_isa_address (id object) {
     [self.p1 addObserver:self forKeyPath:@"age" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew  context:nil];
     NSLog(@"监听后p1: %p, isa: 0x%016llx, setAge: %p, 所属的类: %@(%p), ", self.p1, get_real_isa_address(self.p1), [self.p1 methodForSelector:@selector(setAge:)], object_getClass(self.p1), object_getClass(self.p1));
     
+    // 替换方法
+    id observationInfo = [self.p1 performSelector:@selector(observationInfo)]; // NSObject(NSKeyValueObservingPrivate) 的属性
+    NSLog(@"viewDidLoad: %p", self);
+    NSLog(@"observationInfo: %@", observationInfo);
     /*
      找到了，实现的四个方法。没有找到observer存储在哪
      */
     Class child_cls = object_getClass(self.p1);
     NSLog(@"%@方法:", child_cls);
-    [self printMethodsOfClass:child_cls];
+    printMethodsOfClass(child_cls);
     NSLog(@"%@成员变量:", child_cls);
-    [self printInstanceVarNamesOfClass:child_cls];
+    printInstanceVarNamesOfClass(child_cls);
     NSLog(@"%@属性:", child_cls);
-    [self printPropertyNamesOfClass:child_cls];
+    printPropertyNamesOfClass(child_cls);
 }
 
-- (void)printMethodsOfClass:(Class)cls
-{
-    // 获取方法列表
-    unsigned int count;
-    Method *methodList = class_copyMethodList(cls, &count);
-    
-    for (int i = 0; i < count; i++) {
-        Method method = methodList[i];
-        // 获取方法名
-        NSString *methodName = NSStringFromSelector(method_getName(method));
-        NSLog(@"%@", methodName);
-    }
-    
-    // C函数中以名字中有copy、create、new的函数返回的内存需要手动释放
-    free(methodList);
-}
 
-- (void)printInstanceVarNamesOfClass:(Class)cls
-{
-    // 获取成员变量列表
-    unsigned int count;
-    Ivar *ivarList = class_copyIvarList(cls, &count);
-    
-    for (int i = 0; i < count; i++) {
-        Ivar ivar = ivarList[i];
-        // 获取成员变量名
-        const char *ivarName = ivar_getName(ivar);
-        NSLog(@"%s", ivarName);
-    }
-    
-    // C函数中以名字中有copy、create、new的函数返回的内存需要手动释放
-    free(ivarList);
-}
-
-- (void)printPropertyNamesOfClass:(Class)cls
-{
-    // 获取成员变量列表
-    unsigned int count;
-    objc_property_t *propertyList = class_copyPropertyList(cls, &count);
-    
-    for (int i = 0; i < count; i++) {
-        objc_property_t property = propertyList[i];
-        // 获取成员变量名
-        const char *propertyName = property_getName(property);
-        NSLog(@"%s", propertyName);
-    }
-    
-    // C函数中以名字中有copy、create、new的函数返回的内存需要手动释放
-    free(propertyList);
-}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {

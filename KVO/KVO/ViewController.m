@@ -112,6 +112,66 @@ void printPropertyNamesOfClass(Class cls)
     // _changeValueForKeys:count:maybeOldValuesDict:maybeNewValuesDict:usingBlock:
 }
 
+- (void)willChangeValueForKey:(NSString *)key
+{
+    NSLog(@"[%@ %@]: %@ - begin", [self class], NSStringFromSelector(_cmd), key);
+    [super willChangeValueForKey:key];
+    NSLog(@"[%@ %@]: %@ - end", [self class], NSStringFromSelector(_cmd), key);
+}
+
+- (void)didChangeValueForKey:(NSString *)key
+{
+    NSLog(@"[%@ %@]: %@ - begin", [self class], NSStringFromSelector(_cmd), key);
+    [super didChangeValueForKey:key];
+    NSLog(@"[%@ %@]: %@ - end", [self class], NSStringFromSelector(_cmd), key);
+}
+
+@end
+
+#pragma mark - _NSKVONotifying_Person
+
+@interface _NSKVONotifying_Person : Person // 本来类名没有前缀_， 为了避免和真是的重名加上了下划线。
+
+@end
+
+@implementation _NSKVONotifying_Person
+
+- (void)setAge:(int)age
+{
+    _NSSetIntValueAndNotify(self, age);
+}
+
+// 视频上显示没有参数，我觉得应该有个参数
+void _NSSetIntValueAndNotify (_NSKVONotifying_Person *obj, int newAge)
+{
+    [obj willChangeValueForKey:@"age"];
+    [obj setAge:newAge];
+    [obj didChangeValueForKey:@"age"];
+}
+
+- (void)didChangeValueForKey:(NSString *)key
+{
+    // 获取Observer
+    id info = [self performSelector:@selector(observationInfo)];
+    id observer = info[@"Observer"]; //
+    [observer observeValueForKeyPath:key ofObject:self change:@{@"old": @"old value", @"new": @"new value"} context:nil];
+}
+
+- (Class)class
+{
+    return [Person class];
+}
+
+- (BOOL)_isKVOA
+{
+    return  YES;
+}
+
+- (void)dealloc
+{
+    // 不知道里面做了什么事情
+}
+
 @end
 
 #pragma mark - ViewController
@@ -151,9 +211,16 @@ void printPropertyNamesOfClass(Class cls)
     printInstanceVarNamesOfClass(child_cls);
     NSLog(@"%@属性:", child_cls);
     printPropertyNamesOfClass(child_cls);
+    
+    // 手动触发kvo
+    [self manualKVO];
 }
 
-
+// 手动触发kvo
+- (void)manualKVO {
+    [self.p1 willChangeValueForKey:@"age"];
+    [self.p1 didChangeValueForKey:@"age"];
+}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
@@ -172,18 +239,5 @@ void printPropertyNamesOfClass(Class cls)
     [self.p1 removeObserver:self forKeyPath:@"age"];
 }
 
-
-@end
-
-@interface _NSKVONotifying_Person : Person
-
-@end
-
-@implementation _NSKVONotifying_Person
-
-- (void)setAge:(int)age
-{
-    [super setAge:age];
-}
 
 @end

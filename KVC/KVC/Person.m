@@ -10,4 +10,15 @@
 
 @implementation Person
 
++ (BOOL)accessInstanceVariablesDirectly
+{
+    return NO;
+}
+
+- (void)test
+{
+//    [self accessInstanceVariablesDirectly];
+    [[self class] accessInstanceVariablesDirectly];
+}
+
 @end

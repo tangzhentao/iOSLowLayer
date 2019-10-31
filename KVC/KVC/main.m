@@ -15,6 +15,19 @@
 {
     @public
     int _age;
+    
+    // for get
+//    int isNumber;
+//    int number;
+//    int _isNumber;
+//    int _number;
+    
+    @protected
+//    int isHeight;
+//    int _isHeight;
+//    int height;
+//    int _height;
+    
 }
 
 @property (assign, nonatomic) int weight;
@@ -33,6 +46,12 @@
     return self;
 }
 
++ (BOOL)accessInstanceVariablesDirectly
+{
+    return NO;
+}
+
+#pragma mark KVC - set
 //- (void)setName:(NSString *)name
 //{
 //    NSLog(@"[%@ %@]: %@", [self class], NSStringFromSelector(_cmd), name);
@@ -43,14 +62,50 @@
     NSLog(@"[%@ %@]: %@", [self class], NSStringFromSelector(_cmd), name);
 }
 
-+ (BOOL)accessInstanceVariablesDirectly
-{
-    return YES;
-}
+
 
 - (void)setValue:(id)value forUndefinedKey:(nonnull NSString *)key
 {
     NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+}
+
+- (void)printHeight
+{
+//    NSLog(@"isHeight: %d", isHeight);
+//    NSLog(@"_isHeight: %d", _isHeight);
+//    NSLog(@"_height: %d", _height);
+//    NSLog(@"height: %d", height);
+}
+
+#pragma mark KVC - get
+//- (int)getNumber
+//{
+//    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+//    return 80;
+//}
+
+//- (int)number
+//{
+//    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+//    return 90;
+//}
+
+//- (int)isNumber
+//{
+//    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+//    return 100;
+//}
+
+//- (int)_number
+//{
+//    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+//    return 110;
+//}
+
+- (id)valueForUndefinedKey:(NSString *)key
+{
+    NSLog(@"[%@ %@]: %@", [self class], NSStringFromSelector(_cmd), key);
+    return nil;
 }
 
 @end
@@ -117,10 +172,30 @@ void enableKVO () {
     [student didChangeValueForKey:ageKey];
 }
 
-void kvc ()
+void kvc_set ()
 {
     Student *student = [Student new];
     [student setValue:@"jobs" forKey:@"name"];
+    
+    [student printHeight];
+    NSString *key = @"height";
+    [student setValue:@100 forKey:key];
+    NSLog(@"");
+    [student printHeight];
+}
+
+void kvc_get ()
+{
+    Student *student = [Student new];
+    
+//    student->_number = 11;
+//    student->_isNumber = 12;
+//    student->number = 13;
+//    student->isNumber = 14;
+    
+    NSString *key = @"number";
+    id number = [student valueForKey:key];
+    NSLog(@"number: %@", number);
 }
 
 int main(int argc, const char * argv[]) {
@@ -128,11 +203,14 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         NSLog(@"Hello, World!");
         
-        enableKVO ();
+//        enableKVO ();
 
+//        NSLog(@"");
+//        NSLog(@"****** KVC ******");
+//        kvc_set ();
         NSLog(@"");
-        NSLog(@"****** KVC ******");
-        kvc ();
+
+        kvc_get ();
     }
     return 0;
 }

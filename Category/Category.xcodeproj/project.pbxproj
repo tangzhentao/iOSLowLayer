@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2473A64A236AAF5D007A19BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473A649236AAF5D007A19BF /* main.m */; };
+		24B7CEC3236D2A0A00C9FCEF /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B7CEC2236D2A0A00C9FCEF /* Person.m */; };
+		24B7CEC6236D2A6000C9FCEF /* Person+Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B7CEC5236D2A6000C9FCEF /* Person+Sport.m */; };
+		24B7CEC9236D2AB200C9FCEF /* Person+Amusement.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B7CEC8236D2AB200C9FCEF /* Person+Amusement.m */; };
+		24B7CECC236D2ACC00C9FCEF /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B7CECB236D2ACC00C9FCEF /* Student.m */; };
+		24B7CECF236D2B0300C9FCEF /* Student+Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B7CECE236D2B0300C9FCEF /* Student+Sport.m */; };
+		24B7CED2236D2B1300C9FCEF /* Student+Amusement.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B7CED1236D2B1300C9FCEF /* Student+Amusement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +32,18 @@
 		2473A646236AAF5D007A19BF /* Category */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Category; sourceTree = BUILT_PRODUCTS_DIR; };
 		2473A649236AAF5D007A19BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2473A650236AB242007A19BF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		24B7CEC1236D2A0A00C9FCEF /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		24B7CEC2236D2A0A00C9FCEF /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		24B7CEC4236D2A6000C9FCEF /* Person+Sport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+Sport.h"; sourceTree = "<group>"; };
+		24B7CEC5236D2A6000C9FCEF /* Person+Sport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+Sport.m"; sourceTree = "<group>"; };
+		24B7CEC7236D2AB200C9FCEF /* Person+Amusement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+Amusement.h"; sourceTree = "<group>"; };
+		24B7CEC8236D2AB200C9FCEF /* Person+Amusement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+Amusement.m"; sourceTree = "<group>"; };
+		24B7CECA236D2ACC00C9FCEF /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		24B7CECB236D2ACC00C9FCEF /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		24B7CECD236D2B0300C9FCEF /* Student+Sport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+Sport.h"; sourceTree = "<group>"; };
+		24B7CECE236D2B0300C9FCEF /* Student+Sport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+Sport.m"; sourceTree = "<group>"; };
+		24B7CED0236D2B1300C9FCEF /* Student+Amusement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+Amusement.h"; sourceTree = "<group>"; };
+		24B7CED1236D2B1300C9FCEF /* Student+Amusement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+Amusement.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,18 @@
 			children = (
 				2473A649236AAF5D007A19BF /* main.m */,
 				2473A650236AB242007A19BF /* main.cpp */,
+				24B7CEC1236D2A0A00C9FCEF /* Person.h */,
+				24B7CEC2236D2A0A00C9FCEF /* Person.m */,
+				24B7CEC4236D2A6000C9FCEF /* Person+Sport.h */,
+				24B7CEC5236D2A6000C9FCEF /* Person+Sport.m */,
+				24B7CEC7236D2AB200C9FCEF /* Person+Amusement.h */,
+				24B7CEC8236D2AB200C9FCEF /* Person+Amusement.m */,
+				24B7CECA236D2ACC00C9FCEF /* Student.h */,
+				24B7CECB236D2ACC00C9FCEF /* Student.m */,
+				24B7CECD236D2B0300C9FCEF /* Student+Sport.h */,
+				24B7CECE236D2B0300C9FCEF /* Student+Sport.m */,
+				24B7CED0236D2B1300C9FCEF /* Student+Amusement.h */,
+				24B7CED1236D2B1300C9FCEF /* Student+Amusement.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -120,7 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B7CECC236D2ACC00C9FCEF /* Student.m in Sources */,
+				24B7CECF236D2B0300C9FCEF /* Student+Sport.m in Sources */,
+				24B7CED2236D2B1300C9FCEF /* Student+Amusement.m in Sources */,
+				24B7CEC9236D2AB200C9FCEF /* Person+Amusement.m in Sources */,
+				24B7CEC6236D2A6000C9FCEF /* Person+Sport.m in Sources */,
 				2473A64A236AAF5D007A19BF /* main.m in Sources */,
+				24B7CEC3236D2A0A00C9FCEF /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

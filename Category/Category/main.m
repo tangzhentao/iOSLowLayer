@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
+#import "Student.h"
+#import "Person+Sport.h"
 
 void printMethodsOfClass(Class cls)
 {
@@ -26,102 +28,39 @@ void printMethodsOfClass(Class cls)
     free(methodList);
 }
 
-@interface Person : NSObject
-
-- (void)breathe;
-
-@end
-
-@implementation Person
-
-+ (void)initialize
+/*
+ 测试调用哪一个方法
+ 
+ *结论*
+ 1、当主类和分类中有同名的方法时，会调用分类中的方法，不论主类和分类的编译顺序如何。
+ 2、当同一个主类的分类中有同名方法时，会调用编译顺序靠后的分类中的方法；
+ 
+ *测试步骤*
+ 1、当主类和分类中有同名的方法时，通过调整编译顺序看看调用谁的方法；
+ 2、当通过一个主类有多个分类，且分类中有同名方法时，通过调整编译顺序，看看调用谁的方法。
+ */
+void testCallWhichMethod ()
 {
-    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+    Person *person = [Person new];
+    [person breathe];
+    
+    [person walk];
 }
 
-+ (void)someClassMethod
-{
-    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+void testInitializeMethod () {
+    Person *person = [Person new];
 }
-
-- (void)breathe {
-    NSLog(@"[%@ %@] base", [self class], NSStringFromSelector(_cmd));
-}
-
-@end
-
-@interface Person(Motion)
-
-- (void)walk;
-- (void)run;
-
-@end
-
-@implementation Person(Motion)
-
-+ (void)initialize
-{
-    NSLog(@"[%@ %@]: Motion", [self class], NSStringFromSelector(_cmd));
-}
-
-- (void)breathe {
-    NSLog(@"[%@ %@] Motion", [self class], NSStringFromSelector(_cmd));
-}
-
-- (void)walk {
-    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
-}
-
-- (void)run {
-    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
-}
-
-@end
-
-@interface Person(Amusement)
-
-- (void)sing;
-
-@end
-
-@implementation Person(Amusement)
-
-- (void)sing {
-    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
-}
-
-- (void)breathe {
-    NSLog(@"[%@ %@] Amusement", [self class], NSStringFromSelector(_cmd));
-}
-
-@end
-
-
-@interface Student : Person
-
-@end
-
-@implementation Student
-
-//+ (void)initialize
-//{
-//    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
-//}
-
-@end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
         
-//        Person *person = [Person new];
-//        [person breathe];
-//        [person walk];
-//        [person run];
-//        [person sing];
+//        testCallWhichMethod ();
         
-        [Student new];
+        testInitializeMethod ();
+        
+        
 
     }
     return 0;

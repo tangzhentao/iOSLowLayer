@@ -6,19 +6,14 @@
 //  Copyright © 2019 learn. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
-
-
 #import "Person.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Person (Weight)
 
-//@property (assign, nonatomic) int weight;
-
-- (int)weight;
-- (void)setWeight:(int)weight;
+@property (assign, nonatomic) int weight;
+@property (assign, nonatomic) int height;
 
 @end
 

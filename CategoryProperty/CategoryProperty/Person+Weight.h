@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) int weight;
 @property (assign, nonatomic) int height;
 
+@property (weak, nonatomic) Person *lover;
+
 @end
 
 NS_ASSUME_NONNULL_END

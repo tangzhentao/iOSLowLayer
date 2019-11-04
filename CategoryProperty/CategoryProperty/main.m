@@ -25,6 +25,17 @@ int main(int argc, const char * argv[]) {
         p2.height = 26;
 
         NSLog(@"p2 weight: %d, height: %d", p2.weight, p2.height);
+        
+        {
+            Person *mm = [Person new];
+            p2.lover = mm;
+        }
+        
+        /*
+         将会发生运行时错误：EXC_BAD_ACCESS
+         因为p2.lover指向的内存已经被释放，且p2.lover指针没有被置空，因为OBJC_ASSOCIATION_ASSIGN不等同于weak
+         */
+//        NSLog(@"p2's lover: %@", p2.lover); //
     }
     return 0;
 }

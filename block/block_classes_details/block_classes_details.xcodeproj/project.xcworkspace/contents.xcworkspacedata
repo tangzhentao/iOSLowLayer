@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:block_types.xcodeproj">
+      location = "self:block_classes_details.xcodeproj">
    </FileRef>
 </Workspace>

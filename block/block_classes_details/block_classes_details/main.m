@@ -1,6 +1,6 @@
 //
 //  main.m
-//  block_types_details
+//  block_classes_details
 //
 //  Created by itang on 2019/11/5.
 //  Copyright © 2019 learn. All rights reserved.

@@ -23,9 +23,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24561C632372C7E900881958 /* mian.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mian.cpp; sourceTree = "<group>"; };
+		24561C642372C84E00881958 /* mian_mrc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mian_mrc.cpp; sourceTree = "<group>"; };
 		24E0C9BA237161FC002F1E87 /* block_capute_local_var */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block_capute_local_var; sourceTree = BUILT_PRODUCTS_DIR; };
 		24E0C9BD237161FC002F1E87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		24E0C9C5237168F3002F1E87 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				24E0C9BD237161FC002F1E87 /* main.m */,
-				24E0C9C5237168F3002F1E87 /* main.cpp */,
+				24561C632372C7E900881958 /* mian.cpp */,
+				24561C642372C84E00881958 /* mian_mrc.cpp */,
 			);
 			path = block_capute_local_var;
 			sourceTree = "<group>";
@@ -241,6 +243,7 @@
 		24E0C9C2237161FC002F1E87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -249,6 +252,7 @@
 		24E0C9C3237161FC002F1E87 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

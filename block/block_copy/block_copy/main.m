@@ -10,18 +10,25 @@
 
 @interface Person : NSObject
 
-- (void (^) (void))generateBlock;
+@property (assign, nonatomic) int age;
+
+//- (void (^) (void))generateBlock;
 
 @end
 
 @implementation Person
 
 // OC方法实现返回block
-- (void (^) (void))generateBlock
-{
-    return ^{
-        NSLog(@"hello world.");
-    };
+//- (void (^) (void))generateBlock
+//{
+//    return ^{
+//        NSLog(@"hello world.");
+//    };
+//}
+
+- (void)dealloc {
+    NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
+    [super dealloc];
 }
 
 @end
@@ -37,8 +44,28 @@ void (^generateBlock ()) ()
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        Person *person = [Person new];
-        [person generateBlock]();
+        
+        /*
+         OC方法返回block
+         
+         Person *person = [Person new];
+         [person generateBlock]();
+         */
+        
+        void (^block) (void);
+        {
+            Person *person = [Person new];
+            person.age = 10;
+            
+            block = [^{
+                NSLog(@"age: %d", person.age);
+            } copy];
+            
+            [person release];
+        }
+        NSLog(@"hello world");
+
+        block();
     }
     return 0;
 }

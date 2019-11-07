@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		24561C6E2372CDAC00881958 /* block_copy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block_copy; sourceTree = BUILT_PRODUCTS_DIR; };
 		24561C712372CDAC00881958 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		248BA2F32373CA9E00190172 /* main-arc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "main-arc.cpp"; sourceTree = "<group>"; };
+		248BA2F42373CE6600190172 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				24561C712372CDAC00881958 /* main.m */,
+				248BA2F42373CE6600190172 /* main.cpp */,
+				248BA2F32373CA9E00190172 /* main-arc.cpp */,
 			);
 			path = block_copy;
 			sourceTree = "<group>";
@@ -239,6 +243,7 @@
 		24561C762372CDAC00881958 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -247,6 +252,7 @@
 		24561C772372CDAC00881958 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

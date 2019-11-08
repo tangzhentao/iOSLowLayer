@@ -28,7 +28,6 @@
 
 - (void)dealloc {
     NSLog(@"[%@ %@]", [self class], NSStringFromSelector(_cmd));
-    [super dealloc];
 }
 
 @end
@@ -52,20 +51,31 @@ int main(int argc, const char * argv[]) {
          [person generateBlock]();
          */
         
+//        void (^block) (void);
+//        {
+//            Person *person = [Person new];
+//            person.age = 10;
+//
+//            block = [^{
+//                NSLog(@"age: %d", person.age);
+//            } copy];
+//
+//            [person release];
+//        }
+//        NSLog(@"hello world");
+//
+//        block();
+        
+        
         void (^block) (void);
-        {
-            Person *person = [Person new];
-            person.age = 10;
-            
-            block = [^{
-                NSLog(@"age: %d", person.age);
-            } copy];
-            
-            [person release];
-        }
-        NSLog(@"hello world");
-
-        block();
+       
+        Person *person = [Person new];
+        person.age = 10;
+        
+        block = ^{
+            NSLog(@"age: %d", person.age);
+        };
+    
     }
     return 0;
 }

@@ -27,7 +27,6 @@
 		24561C712372CDAC00881958 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		248BA2F32373CA9E00190172 /* main-arc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "main-arc.cpp"; sourceTree = "<group>"; };
 		248BA2F42373CE6600190172 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		24DBC2E72373F5E900C4510B /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +62,6 @@
 				24561C712372CDAC00881958 /* main.m */,
 				248BA2F42373CE6600190172 /* main.cpp */,
 				248BA2F32373CA9E00190172 /* main-arc.cpp */,
-				24DBC2E72373F5E900C4510B /* test.cpp */,
 			);
 			path = block_copy;
 			sourceTree = "<group>";
